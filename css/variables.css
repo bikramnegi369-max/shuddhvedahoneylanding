@@ -123,6 +123,11 @@
   --why-card-shadow: 0 16px 36px -4px rgba(89, 49, 2, 0.16), 0 8px 18px -4px rgba(89, 49, 2, 0.10);
   --why-card-shadow-hover: 0 24px 48px -4px rgba(89, 49, 2, 0.22), 0 12px 24px -4px rgba(89, 49, 2, 0.14);
   --why-divider: #593102;
+
+  /* Join Our Hive Section Tokens */
+  --color-join-hive-bg: #F9F0DF;
+  --color-join-hive-border: #d8b56a;
+  --color-join-hive-border-focus: #c7872e;
 }
 
 

@@ -1,6 +1,6 @@
 import { initCountdown } from './countdown.js';
 import { initProductsSlider, initHoneyPickSlider } from './slider.js';
-import { initSubscribeForm } from './subscribe.js';
+import { initSubscribeForm, initJoinHiveForm } from './subscribe.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Launch target: 20 October 2026 IST
@@ -14,5 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Subscribe / Launch Access Form
   initSubscribeForm();
+
+  // Initialize Join Our Hive Form
+  initJoinHiveForm();
 });
 
