@@ -166,10 +166,12 @@
    ========================================================================== */
 .stats-section {
   width: 100%;
-  background-color: var(--color-deep-amber);
-  padding: 3rem 0;
+  background: linear-gradient(180deg, var(--color-coffee-bean) 0%, var(--color-deep-amber) 100%);
+  padding: 3.5rem 0;
   position: relative;
   z-index: 2;
+  box-shadow: inset 0 1px 0 rgba(216, 181, 106, 0.25),
+              0 12px 32px rgba(29, 26, 20, 0.15);
 }
 
 .stats-container {
@@ -181,60 +183,83 @@
 .stats-grid {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
+  max-width: 1140px;
 }
 
 /* Individual Glassmorphic Card */
 .stat-card {
-  flex: 1 1 180px;
-  max-width: 220px;
-  min-height: 120px;
-  padding: 1.25rem 1rem;
+  flex: 1 1 200px;
+  max-width: 230px;
+  min-height: 124px;
+  padding: 1.25rem 1.15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
-  background: var(--stats-card-bg);
-  backdrop-filter: var(--stats-card-blur);
-  -webkit-backdrop-filter: var(--stats-card-blur);
-  border-radius: 12px;
-  box-shadow: var(--stats-card-shadow);
-  border: 1px solid rgba(255, 245, 229, 0.08);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
-  user-select: none;
+  gap: 0.75rem;
+  background: rgba(255, 248, 238, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(216, 181, 106, 0.18);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background-color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  cursor: default;
+  outline: none;
 }
 
-.stat-card:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 245, 229, 0.08);
-  box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.35);
-  border-color: rgba(226, 166, 63, 0.25);
+.stat-card:focus-visible {
+  outline: 2px solid var(--color-sun-gold);
+  outline-offset: 3px;
 }
 
-/* Stat Card Icon */
-.stat-card__icon {
+@media (hover: hover) and (pointer: fine) {
+  .stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 248, 238, 0.08);
+    border-color: rgba(226, 166, 63, 0.45);
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(226, 166, 63, 0.15);
+  }
+}
+
+/* Icon Ambient Wrapper */
+.stat-card__icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-stat);
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(226, 166, 63, 0.18) 0%, rgba(226, 166, 63, 0.02) 70%, transparent 100%);
+  border: 1px solid rgba(216, 181, 106, 0.2);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background-color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
 }
 
-.stat-card__icon svg {
-  width: 100%;
-  height: 100%;
-  stroke: var(--color-text-stat);
+.stat-card__svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-sun-gold);
+  stroke: var(--color-sun-gold);
+  transition: transform 0.35s ease, stroke 0.3s ease;
 }
 
-.stat-card:hover .stat-card__icon {
-  transform: scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .stat-card:hover .stat-card__icon-wrap {
+    transform: scale(1.1);
+    background: radial-gradient(circle, rgba(226, 166, 63, 0.28) 0%, rgba(226, 166, 63, 0.05) 75%, transparent 100%);
+    border-color: rgba(226, 166, 63, 0.5);
+    box-shadow: 0 0 16px rgba(226, 166, 63, 0.3);
+  }
 }
 
 /* Stat Card Content Text */
@@ -242,49 +267,82 @@
   font-family: var(--font-poly);
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 15.5px;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
   text-align: center;
   color: var(--color-text-stat);
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stat-card:hover .stat-card__text {
+    color: #fff1d4;
+  }
 }
 
 /* Vertical Gold Divider Between Cards */
 .stats-divider {
-  width: 1.5px;
-  height: 60px;
-  background-color: var(--color-divider-gold);
-  opacity: 0.85;
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(180deg, transparent 0%, var(--color-tacha) 50%, transparent 100%);
+  opacity: 0.65;
   flex-shrink: 0;
-  border-radius: 1px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 860px) {
+@media (max-width: 991px) {
+  .stats-section {
+    padding: 2.75rem 0;
+  }
+
   .stats-divider {
-    display: none; /* Hide vertical thin sticks on wrapping mobile views for clean aesthetic */
+    display: none;
   }
 
   .stats-grid {
-    gap: 1.25rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .stat-card {
-    flex: 1 1 calc(50% - 1.25rem);
-    max-width: 240px;
-    min-height: 110px;
-  }
-}
-
-@media (max-width: 420px) {
-  .stat-card {
-    flex: 1 1 100%;
     max-width: 100%;
+    min-height: 116px;
+    padding: 1.15rem 0.85rem;
   }
 }
 
+@media (max-width: 440px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .stat-card {
+    min-height: 108px;
+    padding: 1rem 0.65rem;
+    border-radius: 14px;
+    gap: 0.55rem;
+  }
+
+  .stat-card__icon-wrap {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stat-card__svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stat-card__text {
+    font-size: 14px;
+  }
+}
 
 /* ==========================================================================
    Intro Section Component ("Not all honey tastes the same")
@@ -558,7 +616,7 @@
 
 /* Subtitle Line below main title */
 .products-subtitle {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 400;
   font-style: italic;
   font-size: clamp(1.15rem, 1.8vw, 24px);
@@ -725,6 +783,53 @@
   color: var(--color-text-primary);
 }
 
+/* Card Footer & 'See lab results' Action Badge */
+.product-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.btn-product-lab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 8px;
+  background-color: var(--product-btn-bg);
+  color: var(--product-btn-text);
+  font-family: var(--font-1);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid rgba(216, 181, 106, 0.35);
+  box-shadow: 0 2px 6px rgba(44, 29, 14, 0.04);
+}
+
+.btn-product-lab__icon {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.25s ease;
+  color: var(--color-brandy-punch);
+}
+
+/* Hover effect on entire card elevates the lab badge */
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover .btn-product-lab {
+    background-color: var(--product-btn-hover);
+    color: var(--color-deep-amber);
+    box-shadow: 0 4px 10px rgba(44, 29, 14, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .product-card:hover .btn-product-lab__icon {
+    transform: translate(2px, -2px);
+  }
+}
+
 /* Pagination Dots */
 .products-pagination {
   display: none;
@@ -836,6 +941,332 @@
   }
 }
 
+/* ==========================================================================
+   Coming Soon Subscribe Section
+   ========================================================================== */
+.subscribe-section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0 6rem;
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(249, 240, 223, 0.2) 0%, rgba(216, 181, 106, 0.2) 100%),
+    linear-gradient(0deg, #593102, #593102);
+  color: var(--color-ecru-white);
+  overflow: hidden;
+}
 
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.subscribe-card {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+}
 
+/* 1. Coming Soon Tag */
+.subscribe-tag {
+  display: inline-block;
+  font-family: 'Libre Caslon Text', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(28px, 4.5vw, 56px);
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--color-sun-gold);
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* 2. Main Title: Something special is waiting. */
+.subscribe-heading {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-size: clamp(20px, 3.2vw, 40px);
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: var(--color-ecru-white);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* 3. Subtext: Exclusive launch offers will be revealed on */
+.subscribe-subtext {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: clamp(12px, 1.1vw, 15px);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--color-ecru-white);
+  opacity: 0.92;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* 4. Offers List */
+.subscribe-offers {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
+.subscribe-offer-item {
+  font-family: var(--font-2);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(13px, 1.2vw, 16px);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--color-ecru-white);
+  position: relative;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* Desktop subtle divider dot between offer items */
+@media (min-width: 640px) {
+  .subscribe-offer-item:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: -1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-tacha);
+    opacity: 0.6;
+    font-style: normal;
+  }
+}
+
+/* 5. Subscription Form - Premium UI/UX Polish */
+.subscribe-form {
+  width: 100%;
+  max-width: 620px;
+  position: relative;
+}
+
+.subscribe-form__group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 5px 6px 5px 18px;
+  box-shadow: 
+    0 12px 36px -4px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(216, 181, 106, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.subscribe-form__group:hover {
+  box-shadow: 
+    0 16px 40px -4px rgba(0, 0, 0, 0.5),
+    0 0 0 1.5px rgba(226, 166, 63, 0.7);
+}
+
+.subscribe-form__group:focus-within {
+  box-shadow: 
+    0 16px 45px -4px rgba(0, 0, 0, 0.55),
+    0 0 0 3px rgba(226, 166, 63, 0.45),
+    0 0 20px rgba(226, 166, 63, 0.25);
+  border-color: var(--color-sun-gold);
+}
+
+.subscribe-input__wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 10px;
+}
+
+.subscribe-input__icon {
+  flex-shrink: 0;
+  color: #a8947b;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.subscribe-form__group:focus-within .subscribe-input__icon {
+  color: var(--color-sun-gold);
+  transform: scale(1.08);
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 0.5rem 0.85rem 0;
+  font-family: var(--font-1);
+  font-size: 15px;
+  font-weight: 400;
+  color: #1d1a14;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.subscribe-input::placeholder {
+  color: #928b80;
+  font-family: var(--font-1);
+  font-size: 14.5px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.subscribe-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.subscribe-submit {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem 1.8rem;
+  background: linear-gradient(135deg, #d38f35 0%, #c8872f 50%, #b87522 100%);
+  border: none;
+  border-radius: 40px;
+  color: #ffffff;
+  font-family: var(--font-1);
+  font-weight: 600;
+  font-size: 12.5px;
+  line-height: 100%;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(200, 135, 47, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subscribe-submit:hover {
+  background: linear-gradient(135deg, #dc9a42 0%, #d18f36 50%, #c47f2a 100%);
+  box-shadow: 0 6px 20px rgba(200, 135, 47, 0.6);
+  transform: translateY(-1px);
+}
+
+.subscribe-submit:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(200, 135, 47, 0.4);
+}
+
+.subscribe-submit__arrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+
+.subscribe-submit:hover .subscribe-submit__arrow {
+  transform: translateX(4px);
+}
+
+/* Form Feedback & Validation Messages */
+.subscribe-feedback {
+  min-height: 1.5rem;
+  margin-top: 0.85rem;
+  font-family: var(--font-1);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease;
+}
+
+.subscribe-feedback.is-success {
+  color: #86efac;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-feedback.is-error {
+  color: #fca5a5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Privacy Assurance Note */
+.subscribe-privacy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+  font-family: var(--font-1);
+  font-size: 12px;
+  color: rgba(244, 239, 227, 0.7);
+  letter-spacing: 0.01em;
+}
+
+.subscribe-privacy svg {
+  opacity: 0.75;
+  color: var(--color-tacha);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .subscribe-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .subscribe-card {
+    padding: 0.5rem 0;
+  }
+
+  .subscribe-offers {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .subscribe-form__group {
+    flex-direction: column;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    gap: 0.75rem;
+  }
+
+  .subscribe-form__group:hover,
+  .subscribe-form__group:focus-within {
+    box-shadow: none;
+  }
+
+  .subscribe-input__wrapper {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0.35rem 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(216, 181, 106, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .subscribe-form__group:focus-within .subscribe-input__wrapper {
+    border-color: var(--color-sun-gold);
+    box-shadow: 0 0 0 3px rgba(226, 166, 63, 0.35);
+  }
+
+  .subscribe-input {
+    padding: 0.75rem 0.5rem 0.75rem 0;
+    font-size: 14px;
+  }
+
+  .subscribe-submit {
+    width: 100%;
+    padding: 0.95rem 1.25rem;
+    border-radius: 12px;
+    font-size: 12.5px;
+    box-shadow: 0 6px 20px rgba(200, 135, 47, 0.4);
+  }
+}

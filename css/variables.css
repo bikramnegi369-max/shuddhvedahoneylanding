@@ -101,4 +101,9 @@
   --product-btn-bg: #f5dfbe;
   --product-btn-hover: #ebd0a7;
   --product-btn-text: #6b4827;
+
+  /* Coming Soon / Subscribe Section Tokens */
+  --color-subscribe-btn: #C8872F;
+  --color-subscribe-btn-hover: #b47522;
+  --color-subscribe-bg-base: #593102;
 }

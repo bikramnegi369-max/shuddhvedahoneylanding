@@ -472,6 +472,66 @@
 
       </div>
     </section>
+
+    <!-- 5. Subscribe / Coming Soon Section -->
+    <section class="subscribe-section" id="subscribe" aria-label="Coming Soon Exclusive Access">
+      <div class="container subscribe-container">
+        <div class="subscribe-card">
+          <!-- Tag / Lead Title -->
+          <span class="subscribe-tag">coming soon</span>
+
+          <!-- Main Headline -->
+          <h2 class="subscribe-heading">Something special is waiting.</h2>
+
+          <!-- Context Subtext -->
+          <p class="subscribe-subtext">Exclusive launch offers will be revealed on</p>
+
+          <!-- Offers / Highlights List -->
+          <ul class="subscribe-offers" aria-label="Upcoming exclusive launch offers">
+            <li class="subscribe-offer-item">Individual jars</li>
+            <li class="subscribe-offer-item">Royal gift boxes with a personal note</li>
+            <li class="subscribe-offer-item">Annual honey subscription</li>
+          </ul>
+
+          <!-- Subscription / VIP Access Form -->
+          <form class="subscribe-form" id="subscribe-form" novalidate>
+            <div class="subscribe-form__group">
+              <div class="subscribe-input__wrapper">
+                <svg class="subscribe-input__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <input
+                  type="email"
+                  id="subscribe-email"
+                  name="email"
+                  class="subscribe-input"
+                  placeholder="Enter your email address..."
+                  required
+                  autocomplete="email"
+                  spellcheck="false"
+                  aria-required="true"
+                  aria-describedby="subscribe-feedback"
+                >
+              </div>
+              <button type="submit" class="subscribe-submit" id="subscribe-submit-btn" aria-label="Get launch access">
+                <span class="subscribe-submit__text">GET LAUNCH ACCESS</span>
+                <span class="subscribe-submit__arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+            <!-- Feedback / Validation Message -->
+            <p class="subscribe-feedback" id="subscribe-feedback" role="status" aria-live="polite"></p>
+            <p class="subscribe-privacy">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>No spam. Only early harvest invitations &amp; launch reserves.</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script type="module" src="./js/main.js"></script>
