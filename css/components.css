@@ -1570,3 +1570,389 @@
   }
 }
 
+/* ==========================================================================
+   7. Why Choose Us Section ("Why shuddhveda honey")
+   ========================================================================== */
+.why-choose-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-why-bg);
+  overflow: hidden;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.why-choose-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 4.5rem);
+  padding-right: 0; /* Let image reach complete right on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Content Area */
+.why-choose-content {
+  flex: 1 1 58%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 2;
+}
+
+/* 1- Badge Pill: "Why shuddhveda honey"
+   font-family: Playfair Display;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 17px;
+   leading-trim: NONE;
+   line-height: 40px;
+   letter-spacing: 1%;
+   vertical-align: middle;
+   color : #593102;
+*/
+.why-choose-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0 1.25rem;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid var(--why-badge-border);
+  background: var(--why-badge-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: default;
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.why-choose-badge:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(216, 181, 106, 0.75);
+  transform: translateY(-1px);
+}
+
+.why-choose-badge__text {
+  font-family: var(--font-playfair);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  color: var(--why-badge-text);
+  white-space: nowrap;
+}
+
+.why-choose-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--why-badge-text);
+  width: 18px;
+  height: 18px;
+}
+
+.why-choose-badge__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.why-choose-badge__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--why-badge-text);
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  transition: transform 0.25s ease;
+}
+
+.why-choose-badge:hover .why-choose-badge__arrow {
+  transform: translateX(3px);
+}
+
+/* 2- Headline: "A Little More Honey. A Lot More to Discover."
+   font-family: Playfair Display;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 53px;
+   leading-trim: NONE;
+   line-height: 69px;
+   letter-spacing: 0px;
+   vertical-align: middle;
+   color : background: linear-gradient(92.04deg, #D4A017 0.91%, #593102 90.67%);
+*/
+.why-choose-title {
+  font-family: var(--font-playfair);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2.2rem, 3.8vw, 53px);
+  line-height: clamp(2.7rem, 4.8vw, 69px);
+  letter-spacing: 0px;
+  vertical-align: middle;
+  margin: 0 0 2.5rem 0;
+  background: var(--why-heading-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Features Grid */
+.why-features-grid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.85rem;
+}
+
+/* 3- Feature Card & Text:
+   font-family: Poly;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 15px;
+   leading-trim: NONE;
+   line-height: 100%;
+   letter-spacing: 0%;
+   text-align: center;
+   color : #504535;
+   bg: #FFF5E50A, NO BORDER, ALL CARDS SAME SIZE
+*/
+.why-feature-card {
+  flex: 1 1 0; /* Ensures all cards have exactly equal width */
+  width: 0;    /* Enforces identical basis across varying text contents */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 0.65rem 1.35rem;
+  background: var(--why-card-bg);
+  border: none; /* No border as requested */
+  border-radius: 20px;
+  box-shadow: var(--why-card-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background 0.35s ease;
+  min-height: 130px;
+  box-sizing: border-box;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .why-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--why-card-shadow-hover);
+    background: rgba(255, 245, 229, 0.16);
+  }
+
+  .why-feature-card:hover .why-feature-icon {
+    transform: scale(1.1);
+    color: #c7872e;
+  }
+}
+
+.why-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #c7872e;
+  margin-bottom: 0.85rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.why-feature-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.why-feature-text {
+  font-family: var(--font-poly);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.25;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--why-card-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px; /* Ensures vertical alignment uniformity */
+}
+
+/* 4- Divider:
+   divider color : #593102
+*/
+.why-feature-divider {
+  width: 1px;
+  height: 54px;
+  background-color: var(--why-divider);
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+/* Right / Visual Column - Touches right border of container, aligned with content and blended with background */
+.why-choose-visual {
+  flex: 1 1 45%;
+  max-width: 640px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.why-choose-picture {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+  /* Smooth organic fade mask on the left edge to blend into #F9F0DF */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 8%, black 22%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 8%, black 22%);
+}
+
+.why-choose-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 450 / 300;
+  object-fit: cover;
+  display: block;
+  margin-right: 0;
+  mix-blend-mode: multiply; /* Perfect seamless watercolor blend with #F9F0DF */
+  transition: transform 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .why-choose-visual:hover .why-choose-img {
+    transform: scale(1.02);
+  }
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .why-features-grid {
+    gap: 0.5rem;
+  }
+
+  .why-feature-card {
+    padding: 1.25rem 0.4rem 1.15rem;
+  }
+
+  .why-feature-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .why-choose-section {
+    padding: 3.5rem 0 0;
+  }
+
+  .why-choose-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0; /* Removed container gap to eliminate double-spacing with visual margin */
+    padding: 0 1.25rem;
+  }
+
+  .why-choose-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Centered Badge on Mobile */
+  .why-choose-badge {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Hide arrow in mobile badge to match mobile mockup */
+  .why-choose-badge__arrow {
+    display: none;
+  }
+
+  .why-choose-title {
+    font-size: clamp(2rem, 6.2vw, 34px);
+    line-height: 1.22;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* 2x2 grid on mobile with equal size cards and no vertical divider rods */
+  .why-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .why-feature-divider {
+    display: none;
+  }
+
+  .why-feature-card {
+    width: 100%;
+    min-height: 115px;
+    padding: 1.25rem 0.75rem;
+    border-radius: 16px;
+  }
+
+  .why-choose-visual {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    margin-top: 1.25rem; /* Clean, controlled spacing directly beneath cards section */
+    margin-bottom: 0;
+    overflow: hidden;
+    display: block;
+  }
+
+  .why-choose-picture {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 8%, black 22%);
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 8%, black 22%);
+  }
+
+  .why-choose-img {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 450 / 300;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    mix-blend-mode: multiply;
+  }
+}
+
+

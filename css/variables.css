@@ -110,4 +110,19 @@
   /* Honey Pick Section Tokens */
   --honey-pick-title-color: #593102;
   --honey-pick-name-color: #593102;
+
+  /* Why Choose Section Tokens */
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --color-why-bg: #F9F0DF;
+  --why-badge-text: #593102;
+  --why-badge-border: rgba(216, 181, 106, 0.45);
+  --why-badge-bg: rgba(255, 255, 255, 0.45);
+  --why-heading-gradient: linear-gradient(92.04deg, #D4A017 0.91%, #593102 90.67%);
+  --why-card-text: #504535;
+  --why-card-bg: #FFF5E50A;
+  --why-card-shadow: 0 16px 36px -4px rgba(89, 49, 2, 0.16), 0 8px 18px -4px rgba(89, 49, 2, 0.10);
+  --why-card-shadow-hover: 0 24px 48px -4px rgba(89, 49, 2, 0.22), 0 12px 24px -4px rgba(89, 49, 2, 0.14);
+  --why-divider: #593102;
 }
+
+
