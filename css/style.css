@@ -14,12 +14,13 @@
   align-items: center;
   overflow: hidden;
   background-color: var(--color-bg-mobile);
-  background-position: center right;
+  background-image: url('../assets/images/hero/hero_mobile_bg.webp');
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Desktop layout with single high-res background */
+/* Desktop layout with single high-res landscape background */
 @media (min-width: 992px) {
   .hero-section {
     background-color: var(--color-bg-primary);

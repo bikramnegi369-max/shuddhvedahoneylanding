@@ -1,539 +1,1001 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShuddhVeda Honey | Pure Honey. Six Floral Journeys. Launching 20 October 2026</title>
-  <meta name="description" content="Something Pure Is Coming. Experience 100% natural, raw single-origin honey crafted by ShuddhVeda. Launching 20 October 2026.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ShuddhVeda Honey | Pure Honey. Six Floral Journeys. Launching 20 October
+      2026
+    </title>
+    <meta
+      name="description"
+      content="Something Pure Is Coming. Experience 100% natural, raw single-origin honey crafted by ShuddhVeda. Launching 20 October 2026."
+    />
 
-  <!-- Resource Preconnects for Core Web Vitals -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Resource Preconnects for Core Web Vitals -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- High-priority font loading with font-display=swap to eliminate FOIT -->
-  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poly:ital@0;1&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- High-priority font loading with font-display=swap to eliminate FOIT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poly:ital@0;1&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Responsive Hero LCP Preload: fetches correct candidate on mobile vs desktop -->
-  <link rel="preload" as="image" href="./assets/images/hero/bg-hero.webp" media="(min-width: 992px)" fetchpriority="high" type="image/webp">
-  <link rel="preload" as="image" href="./assets/images/hero/bg-hero_mobile_600.webp" media="(max-width: 991px)" fetchpriority="high" type="image/webp">
+    <!-- Responsive Hero LCP Preload: fetches correct candidate on mobile vs desktop -->
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero/bg-hero.webp"
+      media="(min-width: 992px)"
+      fetchpriority="high"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero/hero_mobile_bg.webp"
+      media="(max-width: 991px)"
+      fetchpriority="high"
+      type="image/webp"
+    />
 
-  <!-- Core CSS -->
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <main>
-    <section class="hero-section" id="hero" aria-label="Hero Launch Countdown">
-      <div class="container hero-container">
-        <!-- Content Column (Left on Desktop, Top on Mobile) -->
-        <div class="hero-content">
-          <!-- 1. Launch Badge -->
-          <div class="launch-badge" role="status" aria-label="Launch announcement">
-            <span class="launch-badge__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </span>
-            <span class="launch-badge__text">Launching soon</span>
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section
+        class="hero-section"
+        id="hero"
+        aria-label="Hero Launch Countdown"
+      >
+        <div class="container hero-container">
+          <!-- Content Column (Left on Desktop, Top on Mobile) -->
+          <div class="hero-content">
+            <!-- 1. Launch Badge -->
+            <div
+              class="launch-badge"
+              role="status"
+              aria-label="Launch announcement"
+            >
+              <span class="launch-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+              <span class="launch-badge__text">Launching soon</span>
+            </div>
+
+            <!-- 2. Hero Headline -->
+            <h1 class="hero-title">
+              Something <span class="hero-title__highlight">Pure</span><br />
+              Is Coming.
+            </h1>
+
+            <!-- 3. Subheading -->
+            <p class="hero-subtitle">
+              Pure honey. Six floral journeys. One promise of purity.
+            </p>
+
+            <!-- 4. Countdown Timer -->
+            <div
+              class="countdown hero-countdown"
+              id="countdown-timer"
+              role="timer"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <div class="countdown__item">
+                <div class="countdown__divider" aria-hidden="true"></div>
+                <span class="countdown__number" id="countdown-days">19</span>
+                <span class="countdown__label">Days</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__divider" aria-hidden="true"></div>
+                <span class="countdown__number" id="countdown-hours">12</span>
+                <span class="countdown__label">Hours</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__divider" aria-hidden="true"></div>
+                <span class="countdown__number" id="countdown-minutes">52</span>
+                <span class="countdown__label">Minutes</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__divider" aria-hidden="true"></div>
+                <span class="countdown__number" id="countdown-seconds">19</span>
+                <span class="countdown__label">Seconds</span>
+              </div>
+            </div>
+
+            <!-- 5. Call To Action -->
+            <a href="#notify-modal" class="btn-cta" id="cta-notify">
+              <span>Notify me at launch</span>
+              <span class="btn-cta__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </a>
           </div>
 
-          <!-- 2. Hero Headline -->
-          <h1 class="hero-title">
-            Something <span class="hero-title__highlight">Pure</span><br>
-            Is Coming.
-          </h1>
-
-          <!-- 3. Subheading -->
-          <p class="hero-subtitle">
-            Pure honey. Six floral journeys. One promise of purity.
-          </p>
-
-          <!-- 4. Countdown Timer -->
-          <div class="countdown hero-countdown" id="countdown-timer" role="timer" aria-live="polite" aria-atomic="true">
-            <div class="countdown__item">
-              <div class="countdown__divider" aria-hidden="true"></div>
-              <span class="countdown__number" id="countdown-days">19</span>
-              <span class="countdown__label">Days</span>
-            </div>
-            <div class="countdown__item">
-              <div class="countdown__divider" aria-hidden="true"></div>
-              <span class="countdown__number" id="countdown-hours">12</span>
-              <span class="countdown__label">Hours</span>
-            </div>
-            <div class="countdown__item">
-              <div class="countdown__divider" aria-hidden="true"></div>
-              <span class="countdown__number" id="countdown-minutes">52</span>
-              <span class="countdown__label">Minutes</span>
-            </div>
-            <div class="countdown__item">
-              <div class="countdown__divider" aria-hidden="true"></div>
-              <span class="countdown__number" id="countdown-seconds">19</span>
-              <span class="countdown__label">Seconds</span>
-            </div>
+          <!-- Mobile Context Image (Rendered below content on mobile, hidden on desktop) -->
+          <div class="hero-visual" aria-hidden="true">
+            <picture class="hero-visual__picture">
+              <source
+                media="(max-width: 991px)"
+                srcset="
+                  ./assets/images/hero/bg-hero_mobile_400.webp  400w,
+                  ./assets/images/hero/bg-hero_mobile_600.webp  600w,
+                  ./assets/images/hero/bg-hero_mobile_800.webp  800w,
+                  ./assets/images/hero/bg-hero_mobile.webp     1024w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+                type="image/webp"
+              />
+              <img
+                src="./assets/images/hero/bg-hero_mobile.webp"
+                alt="ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
+                class="hero-visual__img"
+                width="1024"
+                height="939"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
-
-          <!-- 5. Call To Action -->
-          <a href="#notify-modal" class="btn-cta" id="cta-notify">
-            <span>Notify me at launch</span>
-            <span class="btn-cta__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </span>
-          </a>
         </div>
+      </section>
 
-        <!-- Mobile Context Image (Rendered below content on mobile, hidden on desktop) -->
-        <div class="hero-visual" aria-hidden="true">
-          <picture class="hero-visual__picture">
+      <!-- 2. Trust Stats / Credibility Bar Section -->
+      <section
+        class="stats-section"
+        id="stats"
+        aria-label="Trust Certifications & Quality Highlights"
+      >
+        <div class="container stats-container">
+          <div class="stats-grid" role="list">
+            <!-- Card 1: Naturally Sourced -->
+            <div class="stat-card" role="listitem">
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- Honeycomb 3-hexagon cluster as in design -->
+                  <path d="M12 3l2.8 1.6v3.2L12 9.4 9.2 7.8V4.6z" />
+                  <path d="M7 11.6l2.8 1.6v3.2L7 18 4.2 16.4v-3.2z" />
+                  <path d="M17 11.6l2.8 1.6v3.2L17 18l-2.8-1.6v-3.2z" />
+                </svg>
+              </div>
+              <p class="stat-card__text">Naturally<br />sourced</p>
+            </div>
+
+            <div class="stats-divider" aria-hidden="true"></div>
+
+            <!-- Card 2: FSSAI Approved -->
+            <div class="stat-card" role="listitem">
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- Thumbs up icon matching screenshot exactly -->
+                  <path d="M7 10v11" />
+                  <path
+                    d="M3 13.5A2.5 2.5 0 0 1 5.5 11H7v10H5.5A2.5 2.5 0 0 1 3 18.5z"
+                  />
+                  <path
+                    d="M7 11l4.5-8a2.1 2.1 0 0 1 3.5 1.5V9h4.5a2.5 2.5 0 0 1 2.45 3l-1.5 7.5A2.5 2.5 0 0 1 18 21H7"
+                  />
+                </svg>
+              </div>
+              <p class="stat-card__text">FSSAI approved</p>
+            </div>
+
+            <div class="stats-divider" aria-hidden="true"></div>
+
+            <!-- Card 3: ISO Certified -->
+            <div class="stat-card" role="listitem">
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m8.032 12 1.984 1.984 4.96-4.96m4.55 5.272.893-.893a1.984 1.984 0 0 0 0-2.806l-.893-.893a1.984 1.984 0 0 1-.581-1.403V7.04a1.984 1.984 0 0 0-1.984-1.984h-1.262a1.983 1.983 0 0 1-1.403-.581l-.893-.893a1.984 1.984 0 0 0-2.806 0l-.893.893a1.984 1.984 0 0 1-1.403.581H7.04A1.984 1.984 0 0 0 5.055 7.04v1.262c0 .527-.209 1.031-.581 1.403l-.893.893a1.984 1.984 0 0 0 0 2.806l.893.893c.372.372.581.876.581 1.403v1.262a1.984 1.984 0 0 0 1.984 1.984h1.262c.527 0 1.031.209 1.403.581l.893.893a1.984 1.984 0 0 0 2.806 0l.893-.893a1.985 1.985 0 0 1 1.403-.581h1.262a1.984 1.984 0 0 0 1.984-1.984V15.7c0-.527.209-1.031.581-1.403Z"
+                  />
+                </svg>
+              </div>
+              <p class="stat-card__text">ISO<br />certified</p>
+            </div>
+
+            <div class="stats-divider" aria-hidden="true"></div>
+
+            <!-- Card 4: Lab Tested -->
+            <div class="stat-card" role="listitem">
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- Laboratory science flask matching screenshot -->
+                  <path
+                    d="M10 2v4.5L4.5 16.8A2.5 2.5 0 0 0 6.6 20.5h10.8a2.5 2.5 0 0 0 2.1-3.7L14 6.5V2"
+                  />
+                  <path d="M8.5 2h7" />
+                </svg>
+              </div>
+
+              <p class="stat-card__text">Lab<br />tested</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Intro Section ("Not all honey tastes the same") -->
+      <section class="intro-section" id="intro" aria-label="Brand Introduction">
+        <div class="container intro-container">
+          <!-- Arch Framed Image (Left on Desktop, Below text on Mobile) -->
+          <div class="intro-media">
+            <div class="intro-media__frame">
+              <img
+                src="./assets/images/intro/intro_bg.webp"
+                alt="Honey bee with pollen basket hovering above a delicate white bloom in warm golden sunlight"
+                class="intro-media__img"
+                width="960"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <!-- Narrative Content (Right on Desktop, First on Mobile) -->
+          <div class="intro-content">
+            <!-- Tag / Badge -->
+            <div
+              class="intro-badge"
+              role="text"
+              aria-label="Section Introduction"
+            >
+              <span class="intro-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- Botanical sprout / flower motif -->
+                  <path d="M12 21V10" />
+                  <path d="M12 10a5 5 0 0 1 5-5c0 3-2 5-5 5z" />
+                  <path d="M12 10a5 5 0 0 0-5-5c0 3 2 5 5 5z" />
+                </svg>
+              </span>
+              <span class="intro-badge__text">INTRODUCTION</span>
+            </div>
+
+            <!-- Section Heading -->
+            <h2 class="intro-heading">
+              Not all honey tastes<br class="intro-break" />
+              the same.
+            </h2>
+
+            <!-- Paragraphs -->
+            <div class="intro-description">
+              <p class="intro-paragraph">
+                Honey changes with the flowers bees visit, the season they
+                forage in, and the landscape around their hives.
+              </p>
+              <p class="intro-paragraph">
+                ShuddhVeda Honey brings you six distinctive varieties, each with
+                its own floral source, aroma, colour and character.
+              </p>
+            </div>
+
+            <!-- Highlight / Quote -->
+            <blockquote class="intro-quote">
+              One hive. One season. One unique story.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Products Section ("Meet the six honeys.") -->
+      <section
+        class="products-section"
+        id="products"
+        aria-label="Our Honey Collection"
+      >
+        <div class="container products-container">
+          <!-- Section Header -->
+          <header class="products-header">
+            <h2 class="products-title">Meet the six honeys.</h2>
+            <p class="products-subtitle">
+              Six distinct floral origins, harvested in harmony with nature.
+            </p>
+          </header>
+
+          <!-- Product Cards Slider / Grid Wrapper -->
+          <div class="products-slider-wrapper" id="products-slider-wrapper">
+            <div
+              class="products-track"
+              id="products-track"
+              role="region"
+              aria-label="Honey products carousel"
+            >
+              <!-- Card 1: Natural Honey -->
+              <a
+                href="./assets/docs/natural_honey.pdf"
+                class="product-card"
+                data-index="0"
+                aria-label="View Natural Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/natural_honey.webp"
+                    alt="Jar of ShuddhVeda Natural Honey from diverse wild flora"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Natural Honey</h3>
+                  <p class="product-card__subtitle">From diverse wild flora</p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value"
+                        >Corbett &amp; Ramnagar, Uttarakhand</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Light, clean &amp; floral</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value"
+                        >Fresh, light, botanical</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 2: Mustard Honey -->
+              <a
+                href="./assets/docs/mustard_honey.pdf"
+                class="product-card"
+                data-index="1"
+                aria-label="View Mustard Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/mustard_honey.webp"
+                    alt="Jar of ShuddhVeda Mustard Honey from mustard blossoms"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Mustard Honey</h3>
+                  <p class="product-card__subtitle">From mustard blossoms</p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value"
+                        >Northwestern India</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Mild &amp; buttery</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value">Pungent, mustardy</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 3: Multiflora Honey -->
+              <a
+                href="./assets/docs/multi_flora_honey.pdf"
+                class="product-card"
+                data-index="2"
+                aria-label="View Multiflora Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/multi_flora_honey.webp"
+                    alt="Jar of ShuddhVeda Multiflora Honey from diverse seasonal blossoms"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Multiflora Honey</h3>
+                  <p class="product-card__subtitle">
+                    From diverse seasonal blossoms
+                  </p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value">Nagrota, Jammu</span>
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Layered &amp; wild floral</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value"
+                        >Meadow blooms, slightly earthy</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 4: Litchi Honey -->
+              <a
+                href="./assets/docs/litchi_honey.pdf"
+                class="product-card"
+                data-index="3"
+                aria-label="View Litchi Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/litchi_honey.webp"
+                    alt="Jar of ShuddhVeda Litchi Honey from litchi orchards"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Litchi Honey</h3>
+                  <p class="product-card__subtitle">From litchi orchards</p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value"
+                        >Pathankot &amp; Ramnagar</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Lightly fruity &amp; mild</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value">Litchi blossom</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 5: Ajwain Honey -->
+              <a
+                href="./assets/docs/ajwain_honey.pdf"
+                class="product-card"
+                data-index="4"
+                aria-label="View Ajwain Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/ajwain_honey.webp"
+                    alt="Jar of ShuddhVeda Ajwain Honey from ajwain blossoms"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Ajwain Honey</h3>
+                  <p class="product-card__subtitle">From ajwain blossoms</p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value"
+                        >Chittorgarh, Rajasthan</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Slightly herbal &amp; earthy</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value"
+                        >Subtle, spice-like</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 6: Fennel Honey -->
+              <a
+                href="./assets/docs/fennel_honey.pdf"
+                class="product-card"
+                data-index="5"
+                aria-label="View Fennel Honey PDF dossier"
+              >
+                <div class="product-card__media">
+                  <img
+                    src="./assets/images/products/fennel_honey.webp"
+                    alt="Jar of ShuddhVeda Fennel Honey from fennel blossoms"
+                    class="product-card__img"
+                    width="400"
+                    height="340"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Fennel Honey</h3>
+                  <p class="product-card__subtitle">From fennel blossoms</p>
+                  <div class="product-card__specs">
+                    <div class="product-spec">
+                      <span class="product-spec__label">REGION</span>
+                      <span class="product-spec__value"
+                        >Gujarat &amp; Rajasthan</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">FLAVOUR</span>
+                      <span class="product-spec__value"
+                        >Clean &amp; slightly viscous</span
+                      >
+                    </div>
+                    <div class="product-spec">
+                      <span class="product-spec__label">AROMA</span>
+                      <span class="product-spec__value"
+                        >Fresh fennel, delicately floral</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots (Mobile) -->
+          <div
+            class="products-pagination"
+            id="products-pagination"
+            aria-label="Carousel pagination"
+          >
+            <button
+              type="button"
+              class="pagination-dot active"
+              aria-label="Go to product 1"
+              data-dot="0"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to product 2"
+              data-dot="1"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to product 3"
+              data-dot="2"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to product 4"
+              data-dot="3"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to product 5"
+              data-dot="4"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to product 6"
+              data-dot="5"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Subscribe / Coming Soon Section -->
+      <section
+        class="subscribe-section"
+        id="subscribe"
+        aria-label="Coming Soon Exclusive Access"
+      >
+        <div class="container subscribe-container">
+          <div class="subscribe-card">
+            <!-- Tag / Lead Title -->
+            <span class="subscribe-tag">coming soon</span>
+
+            <!-- Main Headline -->
+            <h2 class="subscribe-heading">Something special is waiting.</h2>
+
+            <!-- Context Subtext -->
+            <p class="subscribe-subtext">
+              Exclusive launch offers will be revealed on
+            </p>
+
+            <!-- Offers / Highlights List -->
+            <ul
+              class="subscribe-offers"
+              aria-label="Upcoming exclusive launch offers"
+            >
+              <li class="subscribe-offer-item">Individual jars</li>
+              <li class="subscribe-offer-item">
+                Royal gift boxes with a personal note
+              </li>
+              <li class="subscribe-offer-item">Annual honey subscription</li>
+            </ul>
+
+            <!-- Subscription / VIP Access Form -->
+            <form class="subscribe-form" id="subscribe-form" novalidate>
+              <div class="subscribe-form__group">
+                <div class="subscribe-input__wrapper">
+                  <svg
+                    class="subscribe-input__icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <input
+                    type="email"
+                    id="subscribe-email"
+                    name="email"
+                    class="subscribe-input"
+                    placeholder="Enter your email address..."
+                    required
+                    autocomplete="email"
+                    spellcheck="false"
+                    aria-required="true"
+                    aria-describedby="subscribe-feedback"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="subscribe-submit"
+                  id="subscribe-submit-btn"
+                  aria-label="Get launch access"
+                >
+                  <span class="subscribe-submit__text">GET LAUNCH ACCESS</span>
+                  <span class="subscribe-submit__arrow" aria-hidden="true"
+                    >&rarr;</span
+                  >
+                </button>
+              </div>
+              <!-- Feedback / Validation Message -->
+              <p
+                class="subscribe-feedback"
+                id="subscribe-feedback"
+                role="status"
+                aria-live="polite"
+              ></p>
+              <p class="subscribe-privacy">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                  ></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span
+                  >No spam. Only early harvest invitations &amp; launch
+                  reserves.</span
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Honey Journey Section ("Follow the hive, Know your honey") -->
+      <section
+        class="journey-section"
+        id="journey"
+        aria-label="Follow the Hive, Know Your Honey - Honey Harvest Journey"
+      >
+        <div class="journey-container">
+          <picture class="journey-picture">
+            <!-- Mobile viewports: Responsive resolution switching using srcSet width descriptors -->
             <source
               media="(max-width: 991px)"
               srcset="
-                ./assets/images/hero/bg-hero_mobile_400.webp 400w,
-                ./assets/images/hero/bg-hero_mobile_600.webp 600w,
-                ./assets/images/hero/bg-hero_mobile_800.webp 800w,
-                ./assets/images/hero/bg-hero_mobile.webp 1024w
+                ./assets/images/honey_journey/honey_journey_mobile_400.png   400w,
+                ./assets/images/honey_journey/honey_journey_mobile_600.png   600w,
+                ./assets/images/honey_journey/honey_journey_mobile_800.png   800w,
+                ./assets/images/honey_journey/honey_journey_mobile_1024.png 1024w
               "
-              sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
-              type="image/webp"
-            >
-            <img
-              src="./assets/images/hero/bg-hero_mobile.webp"
-              alt="ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
-              class="hero-visual__img"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 100vw"
               width="1024"
-              height="939"
-              fetchpriority="high"
-              decoding="async"
-            >
-          </picture>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 2. Trust Stats / Credibility Bar Section -->
-    <section class="stats-section" id="stats" aria-label="Trust Certifications & Quality Highlights">
-      <div class="container stats-container">
-        <div class="stats-grid" role="list">
-          
-          <!-- Card 1: Naturally Sourced -->
-          <div class="stat-card" role="listitem">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Honeycomb 3-hexagon cluster as in design -->
-                <path d="M12 3l2.8 1.6v3.2L12 9.4 9.2 7.8V4.6z" />
-                <path d="M7 11.6l2.8 1.6v3.2L7 18 4.2 16.4v-3.2z" />
-                <path d="M17 11.6l2.8 1.6v3.2L17 18l-2.8-1.6v-3.2z" />
-              </svg>
-            </div>
-            <p class="stat-card__text">
-              Naturally<br>sourced
-            </p>
-          </div>
-
-          <div class="stats-divider" aria-hidden="true"></div>
-
-          <!-- Card 2: FSSAI Approved -->
-          <div class="stat-card" role="listitem">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Thumbs up icon matching screenshot exactly -->
-                <path d="M7 10v11" />
-                <path d="M3 13.5A2.5 2.5 0 0 1 5.5 11H7v10H5.5A2.5 2.5 0 0 1 3 18.5z" />
-                <path d="M7 11l4.5-8a2.1 2.1 0 0 1 3.5 1.5V9h4.5a2.5 2.5 0 0 1 2.45 3l-1.5 7.5A2.5 2.5 0 0 1 18 21H7" />
-              </svg>
-            </div>
-            <p class="stat-card__text">
-              FSSAI approved
-            </p>
-          </div>
-
-          <div class="stats-divider" aria-hidden="true"></div>
-
-          <!-- Card 3: ISO Certified -->
-          <div class="stat-card" role="listitem">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.032 12 1.984 1.984 4.96-4.96m4.55 5.272.893-.893a1.984 1.984 0 0 0 0-2.806l-.893-.893a1.984 1.984 0 0 1-.581-1.403V7.04a1.984 1.984 0 0 0-1.984-1.984h-1.262a1.983 1.983 0 0 1-1.403-.581l-.893-.893a1.984 1.984 0 0 0-2.806 0l-.893.893a1.984 1.984 0 0 1-1.403.581H7.04A1.984 1.984 0 0 0 5.055 7.04v1.262c0 .527-.209 1.031-.581 1.403l-.893.893a1.984 1.984 0 0 0 0 2.806l.893.893c.372.372.581.876.581 1.403v1.262a1.984 1.984 0 0 0 1.984 1.984h1.262c.527 0 1.031.209 1.403.581l.893.893a1.984 1.984 0 0 0 2.806 0l.893-.893a1.985 1.985 0 0 1 1.403-.581h1.262a1.984 1.984 0 0 0 1.984-1.984V15.7c0-.527.209-1.031.581-1.403Z"/>
-</svg>
-
-            </div>
-            <p class="stat-card__text">
-              ISO<br>certified
-            </p>
-          </div>
-
-          <div class="stats-divider" aria-hidden="true"></div>
-
-          <!-- Card 4: Lab Tested -->
-          <div class="stat-card" role="listitem">
-            <div class="stat-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Laboratory science flask matching screenshot -->
-                <path d="M10 2v4.5L4.5 16.8A2.5 2.5 0 0 0 6.6 20.5h10.8a2.5 2.5 0 0 0 2.1-3.7L14 6.5V2" />
-                <path d="M8.5 2h7" />
-              </svg>
-            </div>
-
-            <p class="stat-card__text">
-              Lab<br>tested
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Intro Section ("Not all honey tastes the same") -->
-    <section class="intro-section" id="intro" aria-label="Brand Introduction">
-      <div class="container intro-container">
-        
-        <!-- Arch Framed Image (Left on Desktop, Below text on Mobile) -->
-        <div class="intro-media">
-          <div class="intro-media__frame">
+              height="2561"
+            />
+            <!-- Desktop & Large Tablet viewports: Full high-resolution desktop journey infographic -->
+            <source
+              media="(min-width: 992px)"
+              srcset="./assets/images/honey_journey/honey_journey.png 1638w"
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              width="1638"
+              height="4096"
+            />
+            <!-- Fallback Image -->
             <img
-              src="./assets/images/intro/intro_bg.webp"
-              alt="Honey bee with pollen basket hovering above a delicate white bloom in warm golden sunlight"
-              class="intro-media__img"
-              width="960"
-              height="1200"
+              src="./assets/images/honey_journey/honey_journey.png"
+              alt="Follow the hive, Know your honey - Visual harvest timeline showing seasonal flowers from Mustard, Lychee, Fennel, Multiflora, Natural honey to Ajwain, followed by ethical harvesting and gentle packaging delivered to your doorstep"
+              class="journey-img"
+              width="1638"
+              height="4096"
               loading="lazy"
               decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- 7. Pick Honey Section ("Which one will be your honey?") -->
+      <section
+        class="honey-pick-section"
+        id="honey-pick"
+        aria-label="Which one will be your honey? Honey Selection"
+      >
+        <div class="honey-pick-container">
+          <header class="honey-pick-header">
+            <h2 class="honey-pick-title">Which one will be <br class="honey-pick-title-br" />your honey?</h2>
+          </header>
+
+          <div class="honey-pick-slider-wrapper" id="honey-pick-slider-wrapper">
+            <div
+              class="honey-pick-track"
+              id="honey-pick-track"
+              role="region"
+              aria-label="Honey selection carousel"
             >
-          </div>
-        </div>
-
-        <!-- Narrative Content (Right on Desktop, First on Mobile) -->
-        <div class="intro-content">
-          <!-- Tag / Badge -->
-          <div class="intro-badge" role="text" aria-label="Section Introduction">
-            <span class="intro-badge__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Botanical sprout / flower motif -->
-                <path d="M12 21V10" />
-                <path d="M12 10a5 5 0 0 1 5-5c0 3-2 5-5 5z" />
-                <path d="M12 10a5 5 0 0 0-5-5c0 3 2 5 5 5z" />
-              </svg>
-            </span>
-            <span class="intro-badge__text">INTRODUCTION</span>
-          </div>
-
-          <!-- Section Heading -->
-          <h2 class="intro-heading">
-            Not all honey tastes<br class="intro-break"> the same.
-          </h2>
-
-          <!-- Paragraphs -->
-          <div class="intro-description">
-            <p class="intro-paragraph">
-              Honey changes with the flowers bees visit, the season they forage in, and the landscape around their hives.
-            </p>
-            <p class="intro-paragraph">
-              ShuddhVeda Honey brings you six distinctive varieties, each with its own floral source, aroma, colour and character.
-            </p>
-          </div>
-
-          <!-- Highlight / Quote -->
-          <blockquote class="intro-quote">
-            One hive. One season. One unique story.
-          </blockquote>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. Products Section ("Meet the six honeys.") -->
-    <section class="products-section" id="products" aria-label="Our Honey Collection">
-      <div class="container products-container">
-        
-        <!-- Section Header -->
-        <header class="products-header">
-          <h2 class="products-title">Meet the six honeys.</h2>
-          <p class="products-subtitle">Six distinct floral origins, harvested in harmony with nature.</p>
-        </header>
-
-        <!-- Product Cards Slider / Grid Wrapper -->
-        <div class="products-slider-wrapper" id="products-slider-wrapper">
-          <div class="products-track" id="products-track" role="region" aria-label="Honey products carousel">
-            
-            <!-- Card 1: Natural Honey -->
-            <a href="./assets/docs/natural_honey.pdf" class="product-card" data-index="0" aria-label="View Natural Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/natural_honey.webp"
-                  alt="Jar of ShuddhVeda Natural Honey from diverse wild flora"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Natural Honey</h3>
-                <p class="product-card__subtitle">From diverse wild flora</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Corbett &amp; Ramnagar, Uttarakhand</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Light, clean &amp; floral</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Fresh, light, botanical</span>
-                  </div>
+              <!-- Item 1: Mustard Honey -->
+              <div class="honey-pick-item" data-index="0" role="group" aria-label="Mustard Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/mustard_honey_pick.webp"
+                    alt="ShuddhVeda Mustard Honey with fresh mustard blooms and wooden dipper"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Mustard<br />Honey</h3>
               </div>
-            </a>
 
-            <!-- Card 2: Mustard Honey -->
-            <a href="./assets/docs/mustard_honey.pdf" class="product-card" data-index="1" aria-label="View Mustard Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/mustard_honey.webp"
-                  alt="Jar of ShuddhVeda Mustard Honey from mustard blossoms"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Mustard Honey</h3>
-                <p class="product-card__subtitle">From mustard blossoms</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Northwestern India</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Mild &amp; buttery</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Pungent, mustardy</span>
-                  </div>
+              <!-- Item 2: Litchi Honey -->
+              <div class="honey-pick-item" data-index="1" role="group" aria-label="Litchi Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/litchi_honey_pick.webp"
+                    alt="ShuddhVeda Litchi Honey with fresh litchi fruit and blossoms"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Litchi<br />Honey</h3>
               </div>
-            </a>
 
-            <!-- Card 3: Multiflora Honey -->
-            <a href="./assets/docs/multi_flora_honey.pdf" class="product-card" data-index="2" aria-label="View Multiflora Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/multi_flora_honey.webp"
-                  alt="Jar of ShuddhVeda Multiflora Honey from diverse seasonal blossoms"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Multiflora Honey</h3>
-                <p class="product-card__subtitle">From diverse seasonal blossoms</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Nagrota, Jammu</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Layered &amp; wild floral</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Meadow blooms, slightly earthy</span>
-                  </div>
+              <!-- Item 3: Fennel Honey -->
+              <div class="honey-pick-item" data-index="2" role="group" aria-label="Fennel Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/fennel_honey_pick.webp"
+                    alt="ShuddhVeda Fennel Honey with fennel flowers and seeds"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Fennel<br />Honey</h3>
               </div>
-            </a>
 
-            <!-- Card 4: Litchi Honey -->
-            <a href="./assets/docs/litchi_honey.pdf" class="product-card" data-index="3" aria-label="View Litchi Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/litchi_honey.webp"
-                  alt="Jar of ShuddhVeda Litchi Honey from litchi orchards"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Litchi Honey</h3>
-                <p class="product-card__subtitle">From litchi orchards</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Pathankot &amp; Ramnagar</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Lightly fruity &amp; mild</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Litchi blossom</span>
-                  </div>
+              <!-- Item 4: Multi Flora Honey -->
+              <div class="honey-pick-item" data-index="3" role="group" aria-label="Multi Flora Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/multi_flora_pick.webp"
+                    alt="ShuddhVeda Multi Flora Honey with diverse wildflower blossoms"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Multi Flora<br />Honey</h3>
               </div>
-            </a>
 
-            <!-- Card 5: Ajwain Honey -->
-            <a href="./assets/docs/ajwain_honey.pdf" class="product-card" data-index="4" aria-label="View Ajwain Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/ajwain_honey.webp"
-                  alt="Jar of ShuddhVeda Ajwain Honey from ajwain blossoms"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Ajwain Honey</h3>
-                <p class="product-card__subtitle">From ajwain blossoms</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Chittorgarh, Rajasthan</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Slightly herbal &amp; earthy</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Subtle, spice-like</span>
-                  </div>
+              <!-- Item 5: Natural Honey -->
+              <div class="honey-pick-item" data-index="4" role="group" aria-label="Natural Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/natural_honey_pick.webp"
+                    alt="ShuddhVeda Natural Honey with pristine floral bouquet and honey comb"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Natural<br />Honey</h3>
               </div>
-            </a>
 
-            <!-- Card 6: Fennel Honey -->
-            <a href="./assets/docs/fennel_honey.pdf" class="product-card" data-index="5" aria-label="View Fennel Honey PDF dossier">
-              <div class="product-card__media">
-                <img
-                  src="./assets/images/products/fennel_honey.webp"
-                  alt="Jar of ShuddhVeda Fennel Honey from fennel blossoms"
-                  class="product-card__img"
-                  width="400"
-                  height="340"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__title">Fennel Honey</h3>
-                <p class="product-card__subtitle">From fennel blossoms</p>
-                <div class="product-card__specs">
-                  <div class="product-spec">
-                    <span class="product-spec__label">REGION</span>
-                    <span class="product-spec__value">Gujarat &amp; Rajasthan</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">FLAVOUR</span>
-                    <span class="product-spec__value">Clean &amp; slightly viscous</span>
-                  </div>
-                  <div class="product-spec">
-                    <span class="product-spec__label">AROMA</span>
-                    <span class="product-spec__value">Fresh fennel, delicately floral</span>
-                  </div>
+              <!-- Item 6: Ajwain Honey -->
+              <div class="honey-pick-item" data-index="5" role="group" aria-label="Ajwain Honey">
+                <div class="honey-pick-media">
+                  <img
+                    src="./assets/images/honey_pick/ajwain_honey_pick.webp"
+                    alt="ShuddhVeda Ajwain Honey with botanical ajwain blooms and seeds"
+                    class="honey-pick-img"
+                    width="250"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
+                <h3 class="honey-pick-name">Ajwain<br />Honey</h3>
               </div>
-            </a>
-
-          </div>
-        </div>
-
-        <!-- Slider Pagination Dots (Mobile) -->
-        <div class="products-pagination" id="products-pagination" aria-label="Carousel pagination">
-          <button type="button" class="pagination-dot active" aria-label="Go to product 1" data-dot="0"></button>
-          <button type="button" class="pagination-dot" aria-label="Go to product 2" data-dot="1"></button>
-          <button type="button" class="pagination-dot" aria-label="Go to product 3" data-dot="2"></button>
-          <button type="button" class="pagination-dot" aria-label="Go to product 4" data-dot="3"></button>
-          <button type="button" class="pagination-dot" aria-label="Go to product 5" data-dot="4"></button>
-          <button type="button" class="pagination-dot" aria-label="Go to product 6" data-dot="5"></button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. Subscribe / Coming Soon Section -->
-    <section class="subscribe-section" id="subscribe" aria-label="Coming Soon Exclusive Access">
-      <div class="container subscribe-container">
-        <div class="subscribe-card">
-          <!-- Tag / Lead Title -->
-          <span class="subscribe-tag">coming soon</span>
-
-          <!-- Main Headline -->
-          <h2 class="subscribe-heading">Something special is waiting.</h2>
-
-          <!-- Context Subtext -->
-          <p class="subscribe-subtext">Exclusive launch offers will be revealed on</p>
-
-          <!-- Offers / Highlights List -->
-          <ul class="subscribe-offers" aria-label="Upcoming exclusive launch offers">
-            <li class="subscribe-offer-item">Individual jars</li>
-            <li class="subscribe-offer-item">Royal gift boxes with a personal note</li>
-            <li class="subscribe-offer-item">Annual honey subscription</li>
-          </ul>
-
-          <!-- Subscription / VIP Access Form -->
-          <form class="subscribe-form" id="subscribe-form" novalidate>
-            <div class="subscribe-form__group">
-              <div class="subscribe-input__wrapper">
-                <svg class="subscribe-input__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <input
-                  type="email"
-                  id="subscribe-email"
-                  name="email"
-                  class="subscribe-input"
-                  placeholder="Enter your email address..."
-                  required
-                  autocomplete="email"
-                  spellcheck="false"
-                  aria-required="true"
-                  aria-describedby="subscribe-feedback"
-                >
-              </div>
-              <button type="submit" class="subscribe-submit" id="subscribe-submit-btn" aria-label="Get launch access">
-                <span class="subscribe-submit__text">GET LAUNCH ACCESS</span>
-                <span class="subscribe-submit__arrow" aria-hidden="true">&rarr;</span>
-              </button>
             </div>
-            <!-- Feedback / Validation Message -->
-            <p class="subscribe-feedback" id="subscribe-feedback" role="status" aria-live="polite"></p>
-            <p class="subscribe-privacy">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-              <span>No spam. Only early harvest invitations &amp; launch reserves.</span>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+          </div>
 
-  <script type="module" src="./js/main.js"></script>
-</body>
+          <!-- Slider Pagination Dots (Mobile) -->
+          <div
+            class="honey-pick-pagination"
+            id="honey-pick-pagination"
+            aria-label="Honey selection carousel pagination"
+          >
+            <button
+              type="button"
+              class="pagination-dot active"
+              aria-label="Go to Mustard Honey"
+              data-dot="0"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to Litchi Honey"
+              data-dot="1"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to Fennel Honey"
+              data-dot="2"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to Multi Flora Honey"
+              data-dot="3"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to Natural Honey"
+              data-dot="4"
+            ></button>
+            <button
+              type="button"
+              class="pagination-dot"
+              aria-label="Go to Ajwain Honey"
+              data-dot="5"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

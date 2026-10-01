@@ -1,16 +1,24 @@
 /**
- * Products Section Carousel Logic
+ * Carousel Factory Logic
  * Seamless Infinite Looping Carousel:
  * Uses clone nodes (last clone prepended, first clone appended) with zero-transition teleportation.
  * Supports smooth touch/mouse dragging, threshold snaps, continuous autoplay, and pagination dots.
  */
-export function initProductsSlider() {
-  const wrapper = document.getElementById('products-slider-wrapper');
-  const track = document.getElementById('products-track');
-  if (!track) return;
+function createCarousel({
+  wrapperId,
+  trackId,
+  itemSelector,
+  dotSelector,
+  initialActiveIndex = 0,
+  breakpoint = 992,
+  autoplayDelay = 3500,
+}) {
+  const wrapper = document.getElementById(wrapperId);
+  const track = document.getElementById(trackId);
+  if (!track || !wrapper) return;
 
-  const originalCards = Array.from(track.querySelectorAll('.product-card:not([data-clone])'));
-  const dots = Array.from(document.querySelectorAll('.pagination-dot'));
+  const originalCards = Array.from(track.querySelectorAll(`${itemSelector}:not([data-clone])`));
+  const dots = Array.from(document.querySelectorAll(dotSelector));
   const totalRealCards = originalCards.length;
   if (totalRealCards === 0) return;
 
@@ -28,20 +36,19 @@ export function initProductsSlider() {
   track.appendChild(firstClone);
   track.insertBefore(lastClone, track.firstChild);
 
-  // All cards including clones: [lastClone (0), Real0 (1), Real1 (2), ..., Real5 (6), firstClone (7)]
-  let allCards = Array.from(track.querySelectorAll('.product-card'));
+  // All cards including clones: [lastClone (0), Real0 (1), Real1 (2), ..., RealN (N+1), firstClone (N+2)]
+  let allCards = Array.from(track.querySelectorAll(itemSelector));
 
-  // Initial active card: Mustard Honey (Real 1 -> index 2 in allCards)
-  let currentIndex = 2;
+  // Initial active card translated to internal index (+1 due to lastClone at 0)
+  let currentIndex = initialActiveIndex + 1;
   let isDragging = false;
   let startX = 0;
   let currentTranslate = 0;
   let prevTranslate = 0;
   let isTransitioning = false;
   let autoplayTimer = null;
-  const AUTOPLAY_DELAY = 3500;
 
-  const isMobile = () => window.innerWidth < 992;
+  const isMobile = () => window.innerWidth < breakpoint;
 
   // Calculates track translation (px) to center allCards[index] in mobile viewport
   function getPositionForIndex(index) {
@@ -223,7 +230,7 @@ export function initProductsSlider() {
       if (!isDragging && !isTransitioning) {
         goToSlide(currentIndex + 1, true);
       }
-    }, AUTOPLAY_DELAY);
+    }, autoplayDelay);
   }
 
   function stopAutoplay() {
@@ -249,7 +256,7 @@ export function initProductsSlider() {
 
   // Prevent navigation when user was dragging the carousel
   track.addEventListener('click', (e) => {
-    const card = e.target.closest('.product-card');
+    const card = e.target.closest(itemSelector);
     if (card && card.dataset.preventClick === 'true') {
       e.preventDefault();
       e.stopPropagation();
@@ -288,7 +295,38 @@ export function initProductsSlider() {
     }, 60);
   } else {
     originalCards.forEach((card, idx) => {
-      if (idx === 1) card.classList.add('is-active');
+      if (idx === initialActiveIndex) card.classList.add('is-active');
     });
   }
 }
+
+/**
+ * Initialize Products Section Carousel
+ */
+export function initProductsSlider() {
+  createCarousel({
+    wrapperId: 'products-slider-wrapper',
+    trackId: 'products-track',
+    itemSelector: '.product-card',
+    dotSelector: '#products-pagination .pagination-dot',
+    initialActiveIndex: 1, // Mustard Honey
+    breakpoint: 992,
+    autoplayDelay: 3500,
+  });
+}
+
+/**
+ * Initialize Honey Pick Section Carousel
+ */
+export function initHoneyPickSlider() {
+  createCarousel({
+    wrapperId: 'honey-pick-slider-wrapper',
+    trackId: 'honey-pick-track',
+    itemSelector: '.honey-pick-item',
+    dotSelector: '#honey-pick-pagination .pagination-dot',
+    initialActiveIndex: 0, // Mustard Honey
+    breakpoint: 992,
+    autoplayDelay: 3500,
+  });
+}
+

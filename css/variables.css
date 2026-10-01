@@ -106,4 +106,8 @@
   --color-subscribe-btn: #C8872F;
   --color-subscribe-btn-hover: #b47522;
   --color-subscribe-bg-base: #593102;
+
+  /* Honey Pick Section Tokens */
+  --honey-pick-title-color: #593102;
+  --honey-pick-name-color: #593102;
 }

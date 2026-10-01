@@ -229,7 +229,8 @@
   }
 }
 
-/* Icon Ambient Wrapper */
+/* Icon Ambient Wrapper & Icon Container */
+.stat-card__icon,
 .stat-card__icon-wrap {
   display: flex;
   align-items: center;
@@ -245,6 +246,7 @@
               box-shadow 0.35s ease;
 }
 
+.stat-card__icon svg,
 .stat-card__svg {
   width: 22px;
   height: 22px;
@@ -254,6 +256,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .stat-card:hover .stat-card__icon,
   .stat-card:hover .stat-card__icon-wrap {
     transform: scale(1.1);
     background: radial-gradient(circle, rgba(226, 166, 63, 0.28) 0%, rgba(226, 166, 63, 0.05) 75%, transparent 100%);
@@ -329,11 +332,13 @@
     gap: 0.55rem;
   }
 
+  .stat-card__icon,
   .stat-card__icon-wrap {
     width: 38px;
     height: 38px;
   }
 
+  .stat-card__icon svg,
   .stat-card__svg {
     width: 20px;
     height: 20px;
@@ -1270,3 +1275,298 @@
     box-shadow: 0 6px 20px rgba(200, 135, 47, 0.4);
   }
 }
+
+/* ==========================================================================
+   5. Honey Journey Section ("Follow the hive, Know your honey")
+   ========================================================================== */
+.journey-section {
+  width: 100%;
+  background-color: var(--color-warm-blush);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem 0;
+  margin: 0;
+}
+
+.journey-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.journey-picture {
+  display: block;
+  width: 100%;
+}
+
+.journey-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 24px;
+  /* Prevent layout shifts by preserving the natural aspect ratio */
+  aspect-ratio: 1638 / 4096;
+}
+
+@media (max-width: 991px) {
+  .journey-section {
+    padding: 0;
+  }
+
+  .journey-container {
+    padding: 0;
+  }
+
+  .journey-img {
+    aspect-ratio: 1024 / 2561;
+    border-radius: 0;
+  }
+}
+
+/* ==========================================================================
+   6. Honey Pick Section ("Which one will be your honey?")
+   ========================================================================== */
+.honey-pick-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg-primary);
+  background-image: url('../assets/images/honey_pick/honey_pick_bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4.5rem 0 5.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.honey-pick-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.honey-pick-header {
+  margin-bottom: 2.75rem;
+  width: 100%;
+}
+
+/* 1- "Which one will be your honey?" title exact specs:
+   font-family: Libre Caslon Text;
+   font-weight: 500;
+   font-size: 47.87px;
+   line-height: 50.26px;
+   letter-spacing: -0.48px;
+   text-align: center;
+   vertical-align: middle;
+   color: #593102;
+*/
+.honey-pick-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 3.4vw, 47.87px);
+  line-height: clamp(2.4rem, 3.6vw, 50.26px);
+  letter-spacing: -0.48px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--honey-pick-title-color);
+  margin: 0;
+}
+
+.honey-pick-title-br {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .honey-pick-title-br {
+    display: inline;
+  }
+}
+
+.honey-pick-slider-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+/* Desktop Grid: 6 columns evenly distributed across the background */
+.honey-pick-track {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+  width: 100%;
+  align-items: end;
+  justify-items: center;
+}
+
+@media (min-width: 992px) {
+  .honey-pick-item[data-clone] {
+    display: none !important;
+  }
+}
+
+.honey-pick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.4s ease;
+  user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .honey-pick-item:hover {
+    transform: translateY(-8px);
+  }
+  .honey-pick-item:hover .honey-pick-img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 14px 22px rgba(89, 49, 2, 0.22));
+  }
+}
+
+.honey-pick-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.honey-pick-img {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(89, 49, 2, 0.14));
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.4s ease;
+  display: block;
+}
+
+/* 2- Honey names exact specs:
+   font-family: Cormorant Garamond;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 100%;
+   letter-spacing: 1.21px;
+   text-align: center;
+   vertical-align: middle;
+   text-transform: uppercase;
+   color: #593102;
+*/
+.honey-pick-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.15;
+  letter-spacing: 1.21px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: var(--honey-pick-name-color);
+  margin: 0;
+}
+
+/* Pagination Dots */
+.honey-pick-pagination {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Mobile Slider Mode (matches products slider behavior) */
+@media (max-width: 991px) {
+  .honey-pick-section {
+    padding: 3.5rem 0 4rem;
+    background-size: cover;
+    background-position: left center;
+  }
+
+  .honey-pick-header {
+    margin-bottom: 2rem;
+  }
+
+  .honey-pick-slider-wrapper {
+    overflow: visible;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    touch-action: pan-y;
+  }
+
+  .honey-pick-track {
+    display: flex;
+    grid-template-columns: unset;
+    column-gap: 0;
+    row-gap: 0;
+    width: 100%;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .honey-pick-track.is-dragging {
+    cursor: grabbing;
+    transition: none;
+  }
+
+  .honey-pick-item {
+    flex: 0 0 68%;
+    max-width: 270px;
+    margin: 0 1.5%;
+    opacity: 0.45;
+    transform: scale(0.85);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .honey-pick-item.is-active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .honey-pick-item.is-active .honey-pick-img {
+    filter: drop-shadow(0 14px 28px rgba(89, 49, 2, 0.25));
+  }
+
+  .honey-pick-img {
+    max-width: 220px;
+  }
+
+  .honey-pick-name {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1.3px;
+  }
+
+  .honey-pick-pagination {
+    display: flex;
+  }
+}
+

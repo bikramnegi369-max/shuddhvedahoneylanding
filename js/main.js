@@ -1,5 +1,5 @@
 import { initCountdown } from './countdown.js';
-import { initProductsSlider } from './slider.js';
+import { initProductsSlider, initHoneyPickSlider } from './slider.js';
 import { initSubscribeForm } from './subscribe.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Products Slider (draggable + autoplay on mobile, responsive grid on desktop)
   initProductsSlider();
+
+  // Initialize Honey Pick Slider (draggable + autoplay on mobile, 6-col showcase on desktop)
+  initHoneyPickSlider();
 
   // Initialize Subscribe / Launch Access Form
   initSubscribeForm();
