@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- High-priority font loading with font-display=swap to eliminate FOIT -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:wght@400;700&family=Poly:ital@0;1&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poly:ital@0;1&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Responsive Hero LCP Preload: fetches correct candidate on mobile vs desktop -->
   <link rel="preload" as="image" href="./assets/images/hero/bg-hero.webp" media="(min-width: 992px)" fetchpriority="high" type="image/webp">
@@ -240,6 +240,234 @@
           <blockquote class="intro-quote">
             One hive. One season. One unique story.
           </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Products Section ("Meet the six honeys.") -->
+    <section class="products-section" id="products" aria-label="Our Honey Collection">
+      <div class="container products-container">
+        
+        <!-- Section Header -->
+        <header class="products-header">
+          <h2 class="products-title">Meet the six honeys.</h2>
+          <p class="products-subtitle">Six distinct floral origins, harvested in harmony with nature.</p>
+        </header>
+
+        <!-- Product Cards Slider / Grid Wrapper -->
+        <div class="products-slider-wrapper" id="products-slider-wrapper">
+          <div class="products-track" id="products-track" role="region" aria-label="Honey products carousel">
+            
+            <!-- Card 1: Natural Honey -->
+            <a href="./assets/docs/natural_honey.pdf" class="product-card" data-index="0" aria-label="View Natural Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/natural_honey.webp"
+                  alt="Jar of ShuddhVeda Natural Honey from diverse wild flora"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Natural Honey</h3>
+                <p class="product-card__subtitle">From diverse wild flora</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Corbett &amp; Ramnagar, Uttarakhand</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Light, clean &amp; floral</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Fresh, light, botanical</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 2: Mustard Honey -->
+            <a href="./assets/docs/mustard_honey.pdf" class="product-card" data-index="1" aria-label="View Mustard Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/mustard_honey.webp"
+                  alt="Jar of ShuddhVeda Mustard Honey from mustard blossoms"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Mustard Honey</h3>
+                <p class="product-card__subtitle">From mustard blossoms</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Northwestern India</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Mild &amp; buttery</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Pungent, mustardy</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 3: Multiflora Honey -->
+            <a href="./assets/docs/multi_flora_honey.pdf" class="product-card" data-index="2" aria-label="View Multiflora Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/multi_flora_honey.webp"
+                  alt="Jar of ShuddhVeda Multiflora Honey from diverse seasonal blossoms"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Multiflora Honey</h3>
+                <p class="product-card__subtitle">From diverse seasonal blossoms</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Nagrota, Jammu</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Layered &amp; wild floral</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Meadow blooms, slightly earthy</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 4: Litchi Honey -->
+            <a href="./assets/docs/litchi_honey.pdf" class="product-card" data-index="3" aria-label="View Litchi Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/litchi_honey.webp"
+                  alt="Jar of ShuddhVeda Litchi Honey from litchi orchards"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Litchi Honey</h3>
+                <p class="product-card__subtitle">From litchi orchards</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Pathankot &amp; Ramnagar</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Lightly fruity &amp; mild</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Litchi blossom</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 5: Ajwain Honey -->
+            <a href="./assets/docs/ajwain_honey.pdf" class="product-card" data-index="4" aria-label="View Ajwain Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/ajwain_honey.webp"
+                  alt="Jar of ShuddhVeda Ajwain Honey from ajwain blossoms"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Ajwain Honey</h3>
+                <p class="product-card__subtitle">From ajwain blossoms</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Chittorgarh, Rajasthan</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Slightly herbal &amp; earthy</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Subtle, spice-like</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 6: Fennel Honey -->
+            <a href="./assets/docs/fennel_honey.pdf" class="product-card" data-index="5" aria-label="View Fennel Honey PDF dossier">
+              <div class="product-card__media">
+                <img
+                  src="./assets/images/products/fennel_honey.webp"
+                  alt="Jar of ShuddhVeda Fennel Honey from fennel blossoms"
+                  class="product-card__img"
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Fennel Honey</h3>
+                <p class="product-card__subtitle">From fennel blossoms</p>
+                <div class="product-card__specs">
+                  <div class="product-spec">
+                    <span class="product-spec__label">REGION</span>
+                    <span class="product-spec__value">Gujarat &amp; Rajasthan</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">FLAVOUR</span>
+                    <span class="product-spec__value">Clean &amp; slightly viscous</span>
+                  </div>
+                  <div class="product-spec">
+                    <span class="product-spec__label">AROMA</span>
+                    <span class="product-spec__value">Fresh fennel, delicately floral</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Slider Pagination Dots (Mobile) -->
+        <div class="products-pagination" id="products-pagination" aria-label="Carousel pagination">
+          <button type="button" class="pagination-dot active" aria-label="Go to product 1" data-dot="0"></button>
+          <button type="button" class="pagination-dot" aria-label="Go to product 2" data-dot="1"></button>
+          <button type="button" class="pagination-dot" aria-label="Go to product 3" data-dot="2"></button>
+          <button type="button" class="pagination-dot" aria-label="Go to product 4" data-dot="3"></button>
+          <button type="button" class="pagination-dot" aria-label="Go to product 5" data-dot="4"></button>
+          <button type="button" class="pagination-dot" aria-label="Go to product 6" data-dot="5"></button>
         </div>
 
       </div>

@@ -513,3 +513,329 @@
     border-top-right-radius: 220px;
   }
 }
+
+/* ==========================================================================
+   4. Products Section ("Meet the six honeys.")
+   ========================================================================== */
+.products-section {
+  padding: 5rem 0 6rem;
+  background-color: var(--color-warm-blush);
+  position: relative;
+  overflow: hidden;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.products-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 3.5rem;
+}
+
+/* 1- Main Title: Caudex, 400, 64px, line-height: 67.2px, letter-spacing: -0.64px, color-text-primary */
+.products-title {
+  font-family: var(--font-caudex);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2.35rem, 4.45vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.64px;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+  margin-bottom: 0.85rem;
+}
+
+@media (min-width: 992px) {
+  .products-title {
+    line-height: 67.2px;
+  }
+}
+
+/* Subtitle Line below main title */
+.products-subtitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 24px);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--color-text-secondary);
+}
+
+/* Slider / Track Wrapper */
+.products-slider-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+/* Desktop Grid: 3 columns x 2 rows */
+.products-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .product-card[data-clone] {
+    display: none !important;
+  }
+}
+
+/* Product Card (Anchor link opening in same tab) */
+.product-card {
+  background: var(--product-card-bg);
+  border: 1px solid var(--product-card-border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--product-card-shadow);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease;
+  position: relative;
+}
+
+.product-card:focus-visible {
+  outline: 2px solid var(--color-brandy-punch);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--product-card-hover-shadow);
+    border-color: rgba(216, 181, 106, 0.55);
+  }
+}
+
+/* Media top block - full edge-to-edge flush with card top */
+.product-card__media {
+  background: var(--product-card-img-bg);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.product-card__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 400 / 320;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover .product-card__img {
+    transform: scale(1.04);
+  }
+}
+
+/* Body content */
+.product-card__body {
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 4- Honey Title: Font 2, 500, Medium, 30.4px, line-height: 31.92px, letter-spacing: -0.3px, text-align: center, color: color-text-primary */
+.product-card__title {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30.4px;
+  line-height: 31.92px;
+  letter-spacing: -0.3px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+  margin-bottom: 0.35rem;
+}
+
+/* 5- Honey Subtitle: Font 2, 400, Italic, 17.6px, line-height: 29px, letter-spacing: 0, text-align: center, color: color-text-secondary */
+.product-card__subtitle {
+  font-family: var(--font-2);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 17.6px;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Specs Block (Region, Flavour, Aroma) */
+.product-card__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 0;
+  border-top: 1px solid var(--product-card-divider);
+}
+
+.product-spec {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--product-card-divider);
+  gap: 0.75rem;
+}
+
+/* 6- Spec Labels: Font 1, 400, 10.9px, line-height: 17.95px, letter-spacing: 1.52px, uppercase, color: color-text-secondary */
+.product-spec__label {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10.9px;
+  line-height: 17.95px;
+  letter-spacing: 1.52px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* 7- Spec Values: Font 1, 400, 14.1px, line-height: 23.23px, letter-spacing: 0, color: color-text-primary */
+.product-spec__value {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14.1px;
+  line-height: 23.23px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+}
+
+/* Pagination Dots */
+.products-pagination {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(216, 181, 106, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pagination-dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background-color: var(--color-brandy-punch);
+}
+
+/* ==========================================================================
+   Mobile Responsive Styles & Carousel Modes (max-width: 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .products-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .products-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .products-title {
+    font-size: clamp(2.2rem, 7vw, 42px);
+    line-height: 1.15;
+  }
+
+  .products-subtitle {
+    font-size: clamp(1rem, 3.5vw, 18px);
+  }
+
+  .products-slider-wrapper {
+    overflow: visible;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    touch-action: pan-y;
+  }
+
+  .products-track {
+    display: flex;
+    grid-template-columns: unset;
+    gap: 0;
+    width: 100%;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .products-track.is-dragging {
+    cursor: grabbing;
+    transition: none;
+  }
+
+  .product-card {
+    flex: 0 0 74%;
+    max-width: 320px;
+    margin: 0 2%;
+    opacity: 0.55;
+    transform: scale(0.88);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.45s ease;
+  }
+
+  .product-card.is-active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 16px 36px -10px rgba(44, 29, 14, 0.2);
+  }
+
+  .product-card__title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .product-card__subtitle {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 1.25rem;
+  }
+
+  .product-spec {
+    grid-template-columns: 75px 1fr;
+    padding: 0.55rem 0;
+  }
+
+  .products-pagination {
+    display: flex;
+  }
+}
+
+
+
+
