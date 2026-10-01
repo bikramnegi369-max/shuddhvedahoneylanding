@@ -1311,10 +1311,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  object-fit: contain;
   border-radius: 24px;
-  /* Prevent layout shifts by preserving the natural aspect ratio */
-  aspect-ratio: 1638 / 4096;
 }
 
 @media (max-width: 991px) {
@@ -1327,7 +1324,6 @@
   }
 
   .journey-img {
-    aspect-ratio: 1024 / 2561;
     border-radius: 0;
   }
 }
