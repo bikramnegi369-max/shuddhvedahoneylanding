@@ -128,6 +128,12 @@
   --color-join-hive-bg: #F9F0DF;
   --color-join-hive-border: #d8b56a;
   --color-join-hive-border-focus: #c7872e;
+
+  /* Footer Section Tokens */
+  --footer-heading-color: var(--color-tacha);
+  --footer-subheading-color: var(--color-deep-amber);
+  --footer-tagline-color: var(--color-deep-amber);
+  --footer-quote-color: var(--color-deep-amber);
 }
 
 

@@ -2332,5 +2332,120 @@
   }
 }
 
+/* ==========================================================================
+   Footer Section Component
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+  background-image: url('../assets/images/footer/footer_bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Maintain beautiful breathing room matching the mockup proportions */
+  padding: clamp(4.5rem, 9vw, 8rem) 1.5rem clamp(5rem, 10vw, 9.5rem);
+}
+
+.site-footer__container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* 1. "Coming Soon" */
+.site-footer__title {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2.75rem, 7.5vw, 107.55px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--footer-heading-color);
+  margin: 0 0 clamp(0.75rem, 1.8vw, 1.5rem);
+  text-wrap: balance;
+}
+
+/* 2. "The wait is almost over." */
+.site-footer__subtitle {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.5rem, 3.4vw, 47.8px);
+  line-height: clamp(1.2, 1.05, 50.19px);
+  letter-spacing: -0.48px;
+  text-align: center;
+  color: var(--footer-subheading-color);
+  margin: 0 0 clamp(2.5rem, 5vw, 4.5rem);
+  text-wrap: balance;
+}
+
+/* Central Brand Emblem & Wordmark */
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.site-footer__logo {
+  width: clamp(160px, 20vw, 240px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(89, 49, 2, 0.08));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-footer__logo:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* 3. "Ancient Purity. Modern Trust." */
+.site-footer__tagline {
+  font-family: var(--font-2);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(13px, 1.1vw, 15.53px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--footer-tagline-color);
+  margin: 0.85rem 0 0;
+}
+
+/* 4. "From flowers. Through bees. To you." */
+.site-footer__quote {
+  font-family: var(--font-2);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(14px, 1.25vw, 17.92px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--footer-quote-color);
+  margin: 0;
+}
+
+/* Responsive fine-tuning */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 4rem 1.25rem 5rem;
+    background-position: center bottom;
+  }
+}
+
 
 
