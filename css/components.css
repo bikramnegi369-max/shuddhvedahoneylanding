@@ -161,3 +161,355 @@
   transform: translate(2px, -2px);
 }
 
+/* ==========================================================================
+   Trust Stats / Quality Badges Component
+   ========================================================================== */
+.stats-section {
+  width: 100%;
+  background-color: var(--color-deep-amber);
+  padding: 3rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Individual Glassmorphic Card */
+.stat-card {
+  flex: 1 1 180px;
+  max-width: 220px;
+  min-height: 120px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: var(--stats-card-bg);
+  backdrop-filter: var(--stats-card-blur);
+  -webkit-backdrop-filter: var(--stats-card-blur);
+  border-radius: 12px;
+  box-shadow: var(--stats-card-shadow);
+  border: 1px solid rgba(255, 245, 229, 0.08);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
+  user-select: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 245, 229, 0.08);
+  box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.35);
+  border-color: rgba(226, 166, 63, 0.25);
+}
+
+/* Stat Card Icon */
+.stat-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-stat);
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card__icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--color-text-stat);
+}
+
+.stat-card:hover .stat-card__icon {
+  transform: scale(1.08);
+}
+
+/* Stat Card Content Text */
+.stat-card__text {
+  font-family: var(--font-poly);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--color-text-stat);
+  margin: 0;
+}
+
+/* Vertical Gold Divider Between Cards */
+.stats-divider {
+  width: 1.5px;
+  height: 60px;
+  background-color: var(--color-divider-gold);
+  opacity: 0.85;
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 860px) {
+  .stats-divider {
+    display: none; /* Hide vertical thin sticks on wrapping mobile views for clean aesthetic */
+  }
+
+  .stats-grid {
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 1.25rem);
+    max-width: 240px;
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  .stat-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   Intro Section Component ("Not all honey tastes the same")
+   ========================================================================== */
+
+
+.intro-section {
+  width: 100%;
+  background-color: var(--color-warm-blush);
+  padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* On Desktop: Two columns side-by-side with media on the left, content on right */
+@media (min-width: 992px) {
+  .intro-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+}
+
+/* 1. Media Column (Arch Framed Image) */
+.intro-media {
+  width: 100%;
+  max-width: 480px;
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .intro-media {
+    max-width: 520px;
+    justify-content: flex-start;
+  }
+}
+
+.intro-media__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-top-left-radius: 260px;
+  border-top-right-radius: 260px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(44, 29, 14, 0.18);
+  background-color: var(--color-ecru-white-20);
+}
+
+.intro-media__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-media__frame:hover .intro-media__img {
+  transform: scale(1.03);
+}
+
+/* 2. Narrative Content Column */
+.intro-content {
+  width: 100%;
+  max-width: 620px;
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 1- "INTRODUCTION" Badge */
+.intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 1.15rem;
+  border-radius: 9999px;
+  background: var(--intro-badge-bg, rgba(255, 255, 255, 0.45));
+  border: 1px solid var(--intro-badge-border, rgba(216, 181, 106, 0.45));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(89, 49, 2, 0.04);
+  margin-bottom: 1.75rem;
+}
+
+.intro-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-accent);
+  opacity: 0.9;
+}
+
+.intro-badge__icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.intro-badge__text {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 34.3px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--color-text-accent);
+  text-transform: uppercase;
+}
+
+/* 2- "Not all honey tastes the same." Heading */
+.intro-heading {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(2.5rem, 5.3vw, 76.76px);
+  line-height: 1.05;
+  letter-spacing: -0.77px;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .intro-heading {
+    line-height: 80.6px;
+  }
+}
+
+.intro-break {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .intro-break {
+    display: inline;
+  }
+}
+
+/* 3- Paragraph Content */
+.intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.intro-paragraph {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1rem, 1.45vw, 21.11px);
+  line-height: 1.65;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 992px) {
+  .intro-paragraph {
+    line-height: 34.78px;
+  }
+}
+
+/* 4- "One hive. One season. One unique story." Highlight Quote */
+.intro-quote {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.8vw, 40.3px);
+  line-height: 1.25;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--color-pickled-bean);
+  border-left: 3px solid var(--intro-quote-border, var(--color-tacha));
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .intro-quote {
+    line-height: 50.37px;
+  }
+}
+
+/* Responsive Ordering (Mobile Mockup matches: Content first, Media below) */
+@media (max-width: 991px) {
+  .intro-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .intro-container {
+    gap: 3rem;
+  }
+
+  .intro-content {
+    order: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .intro-media {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .intro-media__frame {
+    max-width: 440px;
+    border-top-left-radius: 220px;
+    border-top-right-radius: 220px;
+  }
+}

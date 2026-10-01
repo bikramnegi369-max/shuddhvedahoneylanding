@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- High-priority font loading with font-display=swap to eliminate FOIT -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:wght@400;700&family=Poly:ital@0;1&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Responsive Hero LCP Preload: fetches correct candidate on mobile vs desktop -->
   <link rel="preload" as="image" href="./assets/images/hero/bg-hero.webp" media="(min-width: 992px)" fetchpriority="high" type="image/webp">
@@ -36,7 +36,7 @@
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
             </span>
-            <span class="launch-badge__text">Launching 20 October 2026</span>
+            <span class="launch-badge__text">Launching soon</span>
           </div>
 
           <!-- 2. Hero Headline -->
@@ -111,6 +111,137 @@
             >
           </picture>
         </div>
+      </div>
+    </section>
+    
+    <!-- 2. Trust Stats / Credibility Bar Section -->
+    <section class="stats-section" id="stats" aria-label="Trust Certifications & Quality Highlights">
+      <div class="container stats-container">
+        <div class="stats-grid" role="list">
+          
+          <!-- Card 1: Naturally Sourced -->
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Honeycomb 3-hexagon cluster as in design -->
+                <path d="M12 3l2.8 1.6v3.2L12 9.4 9.2 7.8V4.6z" />
+                <path d="M7 11.6l2.8 1.6v3.2L7 18 4.2 16.4v-3.2z" />
+                <path d="M17 11.6l2.8 1.6v3.2L17 18l-2.8-1.6v-3.2z" />
+              </svg>
+            </div>
+            <p class="stat-card__text">
+              Naturally<br>sourced
+            </p>
+          </div>
+
+          <div class="stats-divider" aria-hidden="true"></div>
+
+          <!-- Card 2: FSSAI Approved -->
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Thumbs up icon matching screenshot exactly -->
+                <path d="M7 10v11" />
+                <path d="M3 13.5A2.5 2.5 0 0 1 5.5 11H7v10H5.5A2.5 2.5 0 0 1 3 18.5z" />
+                <path d="M7 11l4.5-8a2.1 2.1 0 0 1 3.5 1.5V9h4.5a2.5 2.5 0 0 1 2.45 3l-1.5 7.5A2.5 2.5 0 0 1 18 21H7" />
+              </svg>
+            </div>
+            <p class="stat-card__text">
+              FSSAI approved
+            </p>
+          </div>
+
+          <div class="stats-divider" aria-hidden="true"></div>
+
+          <!-- Card 3: ISO Certified -->
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.032 12 1.984 1.984 4.96-4.96m4.55 5.272.893-.893a1.984 1.984 0 0 0 0-2.806l-.893-.893a1.984 1.984 0 0 1-.581-1.403V7.04a1.984 1.984 0 0 0-1.984-1.984h-1.262a1.983 1.983 0 0 1-1.403-.581l-.893-.893a1.984 1.984 0 0 0-2.806 0l-.893.893a1.984 1.984 0 0 1-1.403.581H7.04A1.984 1.984 0 0 0 5.055 7.04v1.262c0 .527-.209 1.031-.581 1.403l-.893.893a1.984 1.984 0 0 0 0 2.806l.893.893c.372.372.581.876.581 1.403v1.262a1.984 1.984 0 0 0 1.984 1.984h1.262c.527 0 1.031.209 1.403.581l.893.893a1.984 1.984 0 0 0 2.806 0l.893-.893a1.985 1.985 0 0 1 1.403-.581h1.262a1.984 1.984 0 0 0 1.984-1.984V15.7c0-.527.209-1.031.581-1.403Z"/>
+</svg>
+
+            </div>
+            <p class="stat-card__text">
+              ISO<br>certified
+            </p>
+          </div>
+
+          <div class="stats-divider" aria-hidden="true"></div>
+
+          <!-- Card 4: Lab Tested -->
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Laboratory science flask matching screenshot -->
+                <path d="M10 2v4.5L4.5 16.8A2.5 2.5 0 0 0 6.6 20.5h10.8a2.5 2.5 0 0 0 2.1-3.7L14 6.5V2" />
+                <path d="M8.5 2h7" />
+              </svg>
+            </div>
+
+            <p class="stat-card__text">
+              Lab<br>tested
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Intro Section ("Not all honey tastes the same") -->
+    <section class="intro-section" id="intro" aria-label="Brand Introduction">
+      <div class="container intro-container">
+        
+        <!-- Arch Framed Image (Left on Desktop, Below text on Mobile) -->
+        <div class="intro-media">
+          <div class="intro-media__frame">
+            <img
+              src="./assets/images/intro/intro_bg.webp"
+              alt="Honey bee with pollen basket hovering above a delicate white bloom in warm golden sunlight"
+              class="intro-media__img"
+              width="960"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+        </div>
+
+        <!-- Narrative Content (Right on Desktop, First on Mobile) -->
+        <div class="intro-content">
+          <!-- Tag / Badge -->
+          <div class="intro-badge" role="text" aria-label="Section Introduction">
+            <span class="intro-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Botanical sprout / flower motif -->
+                <path d="M12 21V10" />
+                <path d="M12 10a5 5 0 0 1 5-5c0 3-2 5-5 5z" />
+                <path d="M12 10a5 5 0 0 0-5-5c0 3 2 5 5 5z" />
+              </svg>
+            </span>
+            <span class="intro-badge__text">INTRODUCTION</span>
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="intro-heading">
+            Not all honey tastes<br class="intro-break"> the same.
+          </h2>
+
+          <!-- Paragraphs -->
+          <div class="intro-description">
+            <p class="intro-paragraph">
+              Honey changes with the flowers bees visit, the season they forage in, and the landscape around their hives.
+            </p>
+            <p class="intro-paragraph">
+              ShuddhVeda Honey brings you six distinctive varieties, each with its own floral source, aroma, colour and character.
+            </p>
+          </div>
+
+          <!-- Highlight / Quote -->
+          <blockquote class="intro-quote">
+            One hive. One season. One unique story.
+          </blockquote>
+        </div>
+
       </div>
     </section>
   </main>
