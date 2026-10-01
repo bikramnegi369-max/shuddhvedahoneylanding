@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Base Layout Components
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 4.5rem;
+  }
+}
+
+/* ==========================================================================
+   Hero Launch Badge Component
+   ========================================================================== */
+.launch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(216, 181, 106, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(89, 49, 2, 0.04);
+}
+
+.launch-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-deep-amber);
+  opacity: 0.85;
+}
+
+.launch-badge__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.launch-badge__text {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 34.3px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: var(--color-deep-amber);
+}
+
+/* ==========================================================================
+   Countdown Timer Component
+   ========================================================================== */
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.countdown__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-tacha);
+  margin-bottom: 0.85rem;
+}
+
+.countdown__number {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 68.53px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--color-pickled-bean);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.35rem;
+}
+
+.countdown__label {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: clamp(10px, 1.2vw, 13.76px);
+  line-height: 22.61px;
+  letter-spacing: 2.74px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-deep-amber);
+}
+
+/* ==========================================================================
+   Call To Action (CTA) Button
+   ========================================================================== */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.15rem 2.5rem;
+  border-radius: 0.75rem;
+  background: var(--color-cta-primary);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 27px);
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px -4px rgba(217, 119, 6, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta:hover {
+  background: var(--color-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(180, 83, 9, 0.45);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+.btn-cta:focus-visible {
+  outline: 3px solid var(--color-brandy-punch);
+  outline-offset: 3px;
+}
+
+.btn-cta__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.btn-cta:hover .btn-cta__icon {
+  transform: translate(2px, -2px);
+}
+

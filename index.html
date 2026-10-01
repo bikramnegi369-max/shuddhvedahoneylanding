@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShuddhVeda Honey | Pure Honey. Six Floral Journeys. Launching 20 October 2026</title>
+  <meta name="description" content="Something Pure Is Coming. Experience 100% natural, raw single-origin honey crafted by ShuddhVeda. Launching 20 October 2026.">
+
+  <!-- Resource Preconnects for Core Web Vitals -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- High-priority font loading with font-display=swap to eliminate FOIT -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Caslon+Text:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Responsive Hero LCP Preload: fetches correct candidate on mobile vs desktop -->
+  <link rel="preload" as="image" href="./assets/images/hero/bg-hero.webp" media="(min-width: 992px)" fetchpriority="high" type="image/webp">
+  <link rel="preload" as="image" href="./assets/images/hero/bg-hero_mobile_600.webp" media="(max-width: 991px)" fetchpriority="high" type="image/webp">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <section class="hero-section" id="hero" aria-label="Hero Launch Countdown">
+      <div class="container hero-container">
+        <!-- Content Column (Left on Desktop, Top on Mobile) -->
+        <div class="hero-content">
+          <!-- 1. Launch Badge -->
+          <div class="launch-badge" role="status" aria-label="Launch announcement">
+            <span class="launch-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <span class="launch-badge__text">Launching 20 October 2026</span>
+          </div>
+
+          <!-- 2. Hero Headline -->
+          <h1 class="hero-title">
+            Something <span class="hero-title__highlight">Pure</span><br>
+            Is Coming.
+          </h1>
+
+          <!-- 3. Subheading -->
+          <p class="hero-subtitle">
+            Pure honey. Six floral journeys. One promise of purity.
+          </p>
+
+          <!-- 4. Countdown Timer -->
+          <div class="countdown hero-countdown" id="countdown-timer" role="timer" aria-live="polite" aria-atomic="true">
+            <div class="countdown__item">
+              <div class="countdown__divider" aria-hidden="true"></div>
+              <span class="countdown__number" id="countdown-days">19</span>
+              <span class="countdown__label">Days</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__divider" aria-hidden="true"></div>
+              <span class="countdown__number" id="countdown-hours">12</span>
+              <span class="countdown__label">Hours</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__divider" aria-hidden="true"></div>
+              <span class="countdown__number" id="countdown-minutes">52</span>
+              <span class="countdown__label">Minutes</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__divider" aria-hidden="true"></div>
+              <span class="countdown__number" id="countdown-seconds">19</span>
+              <span class="countdown__label">Seconds</span>
+            </div>
+          </div>
+
+          <!-- 5. Call To Action -->
+          <a href="#notify-modal" class="btn-cta" id="cta-notify">
+            <span>Notify me at launch</span>
+            <span class="btn-cta__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile Context Image (Rendered below content on mobile, hidden on desktop) -->
+        <div class="hero-visual" aria-hidden="true">
+          <picture class="hero-visual__picture">
+            <source
+              media="(max-width: 991px)"
+              srcset="
+                ./assets/images/hero/bg-hero_mobile_400.webp 400w,
+                ./assets/images/hero/bg-hero_mobile_600.webp 600w,
+                ./assets/images/hero/bg-hero_mobile_800.webp 800w,
+                ./assets/images/hero/bg-hero_mobile.webp 1024w
+              "
+              sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+              type="image/webp"
+            >
+            <img
+              src="./assets/images/hero/bg-hero_mobile.webp"
+              alt="ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
+              class="hero-visual__img"
+              width="1024"
+              height="939"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

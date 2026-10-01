@@ -1,0 +1,165 @@
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./components.css');
+
+/* ==========================================================================
+   Hero Section Layout
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-bg-mobile);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Desktop layout with single high-res background */
+@media (min-width: 992px) {
+  .hero-section {
+    background-color: var(--color-bg-primary);
+    background-image: url('../assets/images/hero/bg-hero.webp');
+    background-position: right 40% center;
+    background-size: cover;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* On mobile: centered alignment */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+}
+
+/* Mobile image: pure raw image without border-radius, shadows, or decorative framing */
+.hero-visual {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.hero-visual__picture {
+  display: block;
+  width: 100%;
+}
+
+.hero-visual__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 939;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* Desktop layout overrides (min-width: 992px) */
+@media (min-width: 992px) {
+  .hero-container {
+    align-items: flex-start;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Hero Typography Details
+   ========================================================================== */
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5.2vw, 70px);
+  line-height: 1.12;
+  letter-spacing: 0;
+  color: var(--color-graphite);
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: inherit;
+}
+
+.hero-title__highlight {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: var(--color-brandy-punch-pure);
+}
+
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.3vw, 30px);
+  line-height: 34.3px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: var(--color-deep-amber);
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+  text-align: inherit;
+}
+
+.hero-countdown {
+  margin-bottom: 2.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .hero-countdown {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Subtle entrance animation */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content > * {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.5s; }

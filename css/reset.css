@@ -1,0 +1,18 @@
+/* Box sizing and baseline reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main, sans-serif);
+  background-color: var(--color-bg-primary, #f4efe3);
+  color: var(--color-text-primary, #1d1a14);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
