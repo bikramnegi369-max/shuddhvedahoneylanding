@@ -154,7 +154,7 @@
                 type="image/webp"
               />
               <img
-                src="./assets/images/hero/bg-hero_mobile.webp"
+                src="./assets/images/hero/bg-hero_mobile_400.webp"
                 alt="ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
                 class="hero-visual__img"
                 width="1024"
@@ -903,13 +903,13 @@
                 ./assets/images/honey_journey/honey_journey_mobile_800.png   800w,
                 ./assets/images/honey_journey/honey_journey_mobile_1024.png 1024w
               "
-              sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 100vw"
+              sizes="100vw"
             />
             <!-- Desktop & Large Tablet viewports: Full high-resolution desktop journey infographic -->
             <source
               media="(min-width: 992px)"
               srcset="./assets/images/honey_journey/honey_journey.png 1928w"
-              sizes="(max-width: 1400px) 100vw, 1400px"
+              sizes="(max-width: 1400px) calc(100vw - 3rem), 1400px"
             />
             <!-- Fallback Image -->
             <img
@@ -1242,11 +1242,19 @@
           <div class="why-choose-visual">
             <picture class="why-choose-picture">
               <img
-                src="./assets/images/choose_us/choose_us_image.webp"
+                src="./assets/images/choose_us/choose_us_image_600.webp"
+                srcset="
+                  ./assets/images/choose_us/choose_us_image_400.webp   400w,
+                  ./assets/images/choose_us/choose_us_image_600.webp   600w,
+                  ./assets/images/choose_us/choose_us_image_800.webp   800w,
+                  ./assets/images/choose_us/choose_us_image_1024.webp 1024w,
+                  ./assets/images/choose_us/choose_us_image_1200.webp 1200w
+                "
+                sizes="(max-width: 991px) 100vw, (max-width: 1200px) 45vw, 640px"
                 alt="Idyllic Himalayan meadow with wooden beehives, blooming wildflowers, golden honey combs and dripper"
                 class="why-choose-img"
-                width="450"
-                height="300"
+                width="600"
+                height="400"
                 loading="lazy"
                 decoding="async"
               />

@@ -2474,7 +2474,7 @@
   margin: 0;
 }
 
-/* Responsive background & layout fine-tuning */
+/* Responsive background & layout fine-tuning with High-DPI (Retina) support */
 @media (max-width: 1024px) {
   .site-footer {
     background-image: url('../assets/images/footer/footer_bg_mobile_1024.webp');
@@ -2484,6 +2484,14 @@
 @media (max-width: 800px) {
   .site-footer {
     background-image: url('../assets/images/footer/footer_bg_mobile_800.webp');
+    background-image: -webkit-image-set(
+      url('../assets/images/footer/footer_bg_mobile_800.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_1024.webp') 2x
+    );
+    background-image: image-set(
+      url('../assets/images/footer/footer_bg_mobile_800.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_1024.webp') 2x
+    );
   }
 }
 
@@ -2497,12 +2505,28 @@
 @media (max-width: 600px) {
   .site-footer {
     background-image: url('../assets/images/footer/footer_bg_mobile_600.webp');
+    background-image: -webkit-image-set(
+      url('../assets/images/footer/footer_bg_mobile_600.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_1024.webp') 2x
+    );
+    background-image: image-set(
+      url('../assets/images/footer/footer_bg_mobile_600.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_1024.webp') 2x
+    );
   }
 }
 
 @media (max-width: 400px) {
   .site-footer {
     background-image: url('../assets/images/footer/footer_bg_mobile_400.webp');
+    background-image: -webkit-image-set(
+      url('../assets/images/footer/footer_bg_mobile_400.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_800.webp') 2x
+    );
+    background-image: image-set(
+      url('../assets/images/footer/footer_bg_mobile_400.webp') 1x,
+      url('../assets/images/footer/footer_bg_mobile_800.webp') 2x
+    );
   }
 }
 
