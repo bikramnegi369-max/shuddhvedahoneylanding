@@ -52,11 +52,22 @@
   width: 100%;
 }
 
-/* Mobile image: pure raw image without border-radius, shadows, or decorative framing */
+/* Mobile image: full bleed edge-to-edge without border-radius, shadows, or decorative framing */
 .hero-visual {
   display: block;
-  width: 100%;
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
   margin-top: 2rem;
+  margin-bottom: -3.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-visual {
+    width: calc(100% + 6rem);
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 .hero-visual__picture {
@@ -72,6 +83,7 @@
   border-radius: 0;
   box-shadow: none;
   border: none;
+  display: block;
 }
 
 /* Desktop layout overrides (min-width: 992px) */

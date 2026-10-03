@@ -26,36 +26,24 @@
 .launch-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.35rem 1rem;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(216, 181, 106, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(89, 49, 2, 0.04);
-}
-
-.launch-badge__icon {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  color: var(--color-deep-amber);
-  opacity: 0.85;
-}
-
-.launch-badge__icon svg {
-  width: 16px;
-  height: 16px;
+  padding: 0.65rem 1.6rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(216, 181, 106, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(89, 49, 2, 0.1);
+  white-space: nowrap;
 }
 
 .launch-badge__text {
   font-family: var(--font-serif);
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
-  font-size: 20px;
-  line-height: 34.3px;
-  letter-spacing: 0;
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   vertical-align: middle;
   color: var(--color-deep-amber);
 }
@@ -181,9 +169,9 @@
 }
 
 .stats-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
   gap: 1.5rem;
   width: 100%;
   max-width: 1140px;
@@ -191,15 +179,16 @@
 
 /* Individual Glassmorphic Card */
 .stat-card {
-  flex: 1 1 200px;
-  max-width: 230px;
-  min-height: 124px;
-  padding: 1.25rem 1.15rem;
+  width: 100%;
+  height: 100%;
+  min-height: 136px;
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  box-sizing: border-box;
   background: rgba(255, 248, 238, 0.04);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -237,6 +226,7 @@
   justify-content: center;
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(226, 166, 63, 0.18) 0%, rgba(226, 166, 63, 0.02) 70%, transparent 100%);
   border: 1px solid rgba(216, 181, 106, 0.2);
@@ -276,6 +266,10 @@
   text-align: center;
   color: var(--color-text-stat);
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5em;
   transition: color 0.3s ease;
 }
 
@@ -287,11 +281,7 @@
 
 /* Vertical Gold Divider Between Cards */
 .stats-divider {
-  width: 1px;
-  height: 52px;
-  background: linear-gradient(180deg, transparent 0%, var(--color-tacha) 50%, transparent 100%);
-  opacity: 0.65;
-  flex-shrink: 0;
+  display: none;
 }
 
 /* Responsive adjustments */
@@ -300,12 +290,7 @@
     padding: 2.75rem 0;
   }
 
-  .stats-divider {
-    display: none;
-  }
-
   .stats-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.15rem;
     max-width: 520px;
@@ -313,8 +298,7 @@
   }
 
   .stat-card {
-    max-width: 100%;
-    min-height: 116px;
+    min-height: 124px;
     padding: 1.15rem 0.85rem;
   }
 }
@@ -326,7 +310,7 @@
   }
 
   .stat-card {
-    min-height: 108px;
+    min-height: 114px;
     padding: 1rem 0.65rem;
     border-radius: 14px;
     gap: 0.55rem;
@@ -346,6 +330,7 @@
 
   .stat-card__text {
     font-size: 14px;
+    min-height: 2.5em;
   }
 }
 
