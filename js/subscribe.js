@@ -1,4 +1,4 @@
-const API_SUBMIT_URL = 'https://sltwdpp8-3000.inc1.devtunnels.ms/api/subscribe/submit';
+const API_SUBMIT_URL = 'https://suddhvedha-honey-backend.onrender.com/api/subscribe/submit';
 
 /**
  * Shared API Helper for subscribing

@@ -16,3 +16,52 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/* ==========================================================================
+   Custom Themed Scrollbar (W3C Standard + WebKit/Blink Engines)
+   Theme: ShuddhVeda Artisan Amber & Warm Ecru Palette
+   ========================================================================== */
+
+/* Modern W3C CSS Scrollbars Standard (Firefox 64+, Chrome 121+) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brandy-punch, #c7872e) var(--color-ecru-white, #f4efe3);
+}
+
+/* WebKit / Blink (Safari, Chrome, Edge, Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ecru-white, #f4efe3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--color-tacha, #d8b56a) 0%,
+    var(--color-brandy-punch, #c7872e) 100%
+  );
+  border-radius: 9999px;
+  border: 2px solid var(--color-ecru-white, #f4efe3);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--color-brandy-punch, #c7872e) 0%,
+    var(--color-deep-amber, #593102) 100%
+  );
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-coffee-bean, #2c1d0e);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-ecru-white, #f4efe3);
+}
+
