@@ -33,13 +33,18 @@
     <link
       rel="preload"
       as="image"
-      href="./assets/images/hero/hero_mobile_bg.webp"
+      href="./assets/images/hero/bg-hero_mobile_800.webp"
+      imagesrcset="./assets/images/hero/bg-hero_mobile_400.webp 400w, ./assets/images/hero/bg-hero_mobile_600.webp 600w, ./assets/images/hero/bg-hero_mobile_800.webp 800w, ./assets/images/hero/bg-hero_mobile.webp 1024w"
+      imagesizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
       media="(max-width: 991px)"
       fetchpriority="high"
       type="image/webp"
     />
 
-    <!-- Core CSS -->
+    <!-- Core CSS: Flattened links to allow parallel HTTP/2 multiplexing without @import waterfalls -->
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -353,7 +358,7 @@
                 href="./assets/docs/natural_honey.pdf"
                 class="product-card"
                 data-index="0"
-                aria-label="View Natural Honey PDF dossier"
+                aria-label="Natural Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -422,7 +427,7 @@
                 href="./assets/docs/mustard_honey.pdf"
                 class="product-card"
                 data-index="1"
-                aria-label="View Mustard Honey PDF dossier"
+                aria-label="Mustard Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -489,7 +494,7 @@
                 href="./assets/docs/multi_flora_honey.pdf"
                 class="product-card"
                 data-index="2"
-                aria-label="View Multi Flora Honey PDF dossier"
+                aria-label="Multi Flora Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -558,7 +563,7 @@
                 href="./assets/docs/litchi_honey.pdf"
                 class="product-card"
                 data-index="3"
-                aria-label="View Lychee Honey PDF dossier"
+                aria-label="Lychee Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -625,7 +630,7 @@
                 href="./assets/docs/ajwain_honey.pdf"
                 data-index="4"
                 class="product-card"
-                aria-label="View Ajwain Honey PDF dossier"
+                aria-label="Ajwain Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -694,7 +699,7 @@
                 href="./assets/docs/fennel_honey.pdf"
                 class="product-card"
                 data-index="5"
-                aria-label="View Fennel Honey PDF dossier"
+                aria-label="Fennel Honey - View lab results and PDF dossier"
               >
                 <div class="product-card__media">
                   <img
@@ -1716,33 +1721,48 @@
         </span>
       </a>
     </aside>
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (deferred until idle/interaction for optimal TBT and FCP) -->
     <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
-      fbq("init", "1090217973934077");
-      fbq("track", "PageView");
+      function loadMetaPixel() {
+        if (window.metaPixelLoaded) return;
+        window.metaPixelLoaded = true;
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js",
+        );
+        fbq("init", "1090217973934077");
+        fbq("track", "PageView");
+      }
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(loadMetaPixel, { timeout: 3000 });
+      } else {
+        window.addEventListener("load", function () {
+          setTimeout(loadMetaPixel, 1500);
+        });
+      }
+      ["pointerdown", "touchstart", "scroll", "keydown"].forEach(function (ev) {
+        window.addEventListener(ev, loadMetaPixel, { once: true, passive: true });
+      });
     </script>
     <noscript
       ><img
