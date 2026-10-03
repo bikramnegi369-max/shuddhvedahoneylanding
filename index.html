@@ -1721,48 +1721,33 @@
         </span>
       </a>
     </aside>
-    <!-- Meta Pixel Code (deferred until idle/interaction for optimal TBT and FCP) -->
+    <!-- Meta Pixel Code -->
     <script>
-      function loadMetaPixel() {
-        if (window.metaPixelLoaded) return;
-        window.metaPixelLoaded = true;
-        !(function (f, b, e, v, n, t, s) {
-          if (f.fbq) return;
-          n = f.fbq = function () {
-            n.callMethod
-              ? n.callMethod.apply(n, arguments)
-              : n.queue.push(arguments);
-          };
-          if (!f._fbq) f._fbq = n;
-          n.push = n;
-          n.loaded = !0;
-          n.version = "2.0";
-          n.queue = [];
-          t = b.createElement(e);
-          t.async = !0;
-          t.src = v;
-          s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s);
-        })(
-          window,
-          document,
-          "script",
-          "https://connect.facebook.net/en_US/fbevents.js",
-        );
-        fbq("init", "1090217973934077");
-        fbq("track", "PageView");
-      }
-
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(loadMetaPixel, { timeout: 3000 });
-      } else {
-        window.addEventListener("load", function () {
-          setTimeout(loadMetaPixel, 1500);
-        });
-      }
-      ["pointerdown", "touchstart", "scroll", "keydown"].forEach(function (ev) {
-        window.addEventListener(ev, loadMetaPixel, { once: true, passive: true });
-      });
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1090217973934077");
+      fbq("track", "PageView");
     </script>
     <noscript
       ><img
