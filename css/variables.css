@@ -44,9 +44,9 @@
   /* Warm Cream/Blush Background */
   --color-warm-blush: #fcecdc;
 
-  /* Primary CTA Amber */
-  --color-cta-primary: #d97706;
-  --color-cta-hover: #b45309;
+  /* Primary CTA Amber (optimized for WCAG AA 4.5:1+ contrast on white text) */
+  --color-cta-primary: #b45309;
+  --color-cta-hover: #92400e;
 
   /* Forest & Botanical Greens */
   --color-racing-green: #0f1913;

@@ -30,8 +30,12 @@ function createCarousel({
   const lastClone = originalCards[totalRealCards - 1].cloneNode(true);
   firstClone.setAttribute('data-clone', 'first');
   firstClone.setAttribute('aria-hidden', 'true');
+  firstClone.setAttribute('tabindex', '-1');
+  firstClone.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
   lastClone.setAttribute('data-clone', 'last');
   lastClone.setAttribute('aria-hidden', 'true');
+  lastClone.setAttribute('tabindex', '-1');
+  lastClone.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
 
   track.appendChild(firstClone);
   track.insertBefore(lastClone, track.firstChild);
