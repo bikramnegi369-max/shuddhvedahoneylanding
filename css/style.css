@@ -96,7 +96,7 @@
    Hero Typography Details
    ========================================================================== */
 .hero-title {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(2.5rem, 5.2vw, 70px);
   line-height: 1.12;
@@ -108,7 +108,7 @@
 }
 
 .hero-title__highlight {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 400;
   font-size: inherit;
   line-height: inherit;
