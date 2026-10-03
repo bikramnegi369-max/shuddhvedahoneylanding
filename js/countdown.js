@@ -1,8 +1,10 @@
 /**
- * Live Countdown Timer Module for Launch Date (20 October 2026)
- * Uses requestAnimationFrame / periodic drift-corrected interval
+ * Live Countdown Timer Module for Launch Date
+ * Note: Temporarily deactivated until official launch date is finalized.
+ * Retained for future launch activation.
  */
 
+/*
 export function initCountdown(targetDateString = '2026-10-20T00:00:00+05:30') {
   const daysEl = document.getElementById('countdown-days');
   const hoursEl = document.getElementById('countdown-hours');
@@ -44,3 +46,5 @@ export function initCountdown(targetDateString = '2026-10-20T00:00:00+05:30') {
 
   return () => clearInterval(timerId);
 }
+*/
+
