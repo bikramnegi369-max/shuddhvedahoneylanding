@@ -9,21 +9,24 @@ A high-converting, performance-oriented landing page for **ShuddhVeda Honey** bu
 ```text
 shuddhvedahoney landing/
 ├── assets/                  # Static media and design assets
-│   ├── images/              # Optimized web images (.webp, .svg, .png, .jpg)
-│   │   ├── hero/            # Hero section visuals & product showcases
-│   │   ├── products/        # Product jars, nutritional tables, badges
-│   │   └── icons/           # Feature icons, benefits, trust seals (SVG)
-│   └── fonts/               # Self-hosted web fonts (if not using CDN)
+│   ├── docs/                # Lab test results and certificates (PDF)
+│   └── images/              # Highly optimized responsive web images (.webp, .png)
+│       ├── choose_us/       # Why Choose section imagery
+│       ├── footer/          # Responsive footer backgrounds and brand logo
+│       ├── hero/            # Hero section desktop & responsive mobile visuals
+│       ├── honey_journey/   # Responsive visual storytelling graphic
+│       ├── honey_pick/      # Six floral varieties cards & background
+│       ├── intro/           # Brand introduction imagery
+│       └── products/        # Product jars showcase
 ├── css/                     # Stylesheets (modular architecture)
 │   ├── variables.css        # CSS Custom Properties (colors, spacing, typography)
 │   ├── reset.css            # Modern reset / normalize
-│   ├── components.css       # Reusable UI elements (buttons, badges, cards, modals)
+│   ├── components.css       # Reusable UI elements (cards, carousels, forms, badges)
 │   └── style.css            # Primary entrypoint importing partials & layout styles
-├── js/                      # Frontend JavaScript
-│   ├── modules/             # Single-responsibility logic modules
-│   │   ├── countdown.js     # Limited-time offers or urgency timers
-│   │   ├── faq.js           # Accordion toggle logic
-│   │   └── reviews.js       # Testimonials slider or tab switcher
+├── js/                      # Frontend JavaScript ES modules
+│   ├── countdown.js         # Live launch countdown timer with drift correction
+│   ├── slider.js            # Dual seamless infinite carousels (drag + touch + auto)
+│   ├── subscribe.js         # REST API lead capture & validation handlers
 │   └── main.js              # Core orchestration & DOMContentLoaded hook
 ├── design-inputs/           # Marketing briefs, copy decks, and wireframe specs
 │   └── briefs/
