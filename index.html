@@ -935,30 +935,34 @@
       >
         <div class="journey-container">
           <picture class="journey-picture">
-            <!-- Mobile viewports: Responsive resolution switching using srcSet width descriptors -->
+            <!-- Mobile viewports: Responsive resolution switching using Cloudinary transformations -->
             <source
               media="(max-width: 991px)"
               srcset="
-                ./assets/images/honey_journey/honey_journey_mobile_400.png   400w,
-                ./assets/images/honey_journey/honey_journey_mobile_600.png   600w,
-                ./assets/images/honey_journey/honey_journey_mobile_800.png   800w,
-                ./assets/images/honey_journey/honey_journey_mobile_1024.png 1024w
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_400/v1791543776/r_qukxod.png   400w,
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_600/v1791543776/r_qukxod.png   600w,
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_800/v1791543776/r_qukxod.png   800w,
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_1024/v1791543776/r_qukxod.png 1024w
               "
               sizes="100vw"
             />
-            <!-- Desktop & Large Tablet viewports: Full high-resolution desktop journey infographic -->
+            <!-- Desktop & Large Tablet viewports: Cloudinary high-res delivery -->
             <source
               media="(min-width: 992px)"
-              srcset="./assets/images/honey_journey/honey_journey.png 1928w"
+              srcset="
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_1400/v1791543776/r_qukxod.png 1400w,
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_1920/v1791543776/r_qukxod.png 1920w,
+                https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_2544/v1791543776/r_qukxod.png 2544w
+              "
               sizes="(max-width: 1400px) calc(100vw - 3rem), 1400px"
             />
             <!-- Fallback Image -->
             <img
-              src="./assets/images/honey_journey/honey_journey.png"
+              src="https://res.cloudinary.com/anjp8e9i/image/upload/f_auto,q_auto,w_1400/v1791543776/r_qukxod.png"
               alt="Follow the hive, Know your honey - Visual harvest timeline showing seasonal flowers from Mustard, Lychee, Fennel, Multi Flora, Natural honey to Ajwain, followed by ethical harvesting and gentle packaging delivered to your doorstep"
               class="journey-img"
-              width="1928"
-              height="4490"
+              width="2544"
+              height="3816"
               loading="lazy"
               decoding="async"
             />
@@ -1796,5 +1800,19 @@
       ></noscript
     >
     <!-- Hitsteps TRACKING CODE - DO NOT CHANGE -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ywkr9oh72s");
+    </script>
   </body>
 </html>

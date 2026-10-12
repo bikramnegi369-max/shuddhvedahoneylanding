@@ -14,7 +14,6 @@ shuddhvedahoney landing/
 │       ├── choose_us/       # Why Choose section imagery
 │       ├── footer/          # Responsive footer backgrounds and brand logo
 │       ├── hero/            # Hero section desktop & responsive mobile visuals
-│       ├── honey_journey/   # Responsive visual storytelling graphic
 │       ├── honey_pick/      # Six floral varieties cards & background
 │       ├── intro/           # Brand introduction imagery
 │       └── products/        # Product jars showcase
