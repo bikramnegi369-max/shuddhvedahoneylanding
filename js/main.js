@@ -1,10 +1,13 @@
 // import { initCountdown } from './countdown.js';
-import { initProductsSlider, initHoneyPickSlider } from './slider.js';
+import { initHeroSlider, initProductsSlider, initHoneyPickSlider } from './slider.js';
 import { initSubscribeForm, initJoinHiveForm } from './subscribe.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Launch Countdown (deactivated until launch date is finalized)
   // initCountdown('2026-10-20T00:00:00+05:30');
+
+  // Initialize Hero Slider (draggable + autoplay on mobile, hidden on desktop)
+  initHeroSlider();
 
   // Initialize Products Slider (draggable + autoplay on mobile, responsive grid on desktop)
   initProductsSlider();

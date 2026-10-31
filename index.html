@@ -51,8 +51,8 @@
     <main>
       <section class="hero-section" id="hero" aria-label="Hero Launch Section">
         <div class="container hero-container">
-          <!-- Content Column (Left on Desktop, Top on Mobile) -->
-          <div class="hero-content">
+          <!-- Desktop Static Content Column (Hidden on Mobile) -->
+          <div class="hero-content hero-content--desktop">
             <!-- 1. Launch Badge -->
             <div
               class="launch-badge"
@@ -74,40 +74,9 @@
               One promise of purity.
             </p>
 
-            <!-- 4. Launch Countdown (Temporarily commented out until launch date is finalized)
-            <div
-              class="countdown hero-countdown"
-              id="countdown-timer"
-              role="timer"
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              <div class="countdown__item">
-                <div class="countdown__divider" aria-hidden="true"></div>
-                <span class="countdown__number" id="countdown-days">00</span>
-                <span class="countdown__label">Days</span>
-              </div>
-              <div class="countdown__item">
-                <div class="countdown__divider" aria-hidden="true"></div>
-                <span class="countdown__number" id="countdown-hours">00</span>
-                <span class="countdown__label">Hours</span>
-              </div>
-              <div class="countdown__item">
-                <div class="countdown__divider" aria-hidden="true"></div>
-                <span class="countdown__number" id="countdown-minutes">00</span>
-                <span class="countdown__label">Minutes</span>
-              </div>
-              <div class="countdown__item">
-                <div class="countdown__divider" aria-hidden="true"></div>
-                <span class="countdown__number" id="countdown-seconds">00</span>
-                <span class="countdown__label">Seconds</span>
-              </div>
-            </div>
-            -->
-
-            <!-- 5. Call To Action -->
-            <a href="#subscribe" class="btn-cta" id="cta-notify">
-              <span>Notify me at launch</span>
+            <!-- 4. Call To Action -->
+            <a href="#join-hive" class="btn-cta" id="cta-notify-desktop" aria-label="Unlock 10% coupon by joining our launch list">
+              <span>Unlock 10% coupon</span>
               <span class="btn-cta__icon" aria-hidden="true">
                 <svg
                   width="22"
@@ -126,30 +95,351 @@
             </a>
           </div>
 
-          <!-- Mobile Context Image (Rendered below content on mobile, hidden on desktop) -->
-          <div class="hero-visual" aria-hidden="true">
-            <picture class="hero-visual__picture">
-              <source
-                media="(max-width: 991px)"
-                srcset="
-                  ./assets/images/hero/bg-hero_mobile_400.webp  400w,
-                  ./assets/images/hero/bg-hero_mobile_600.webp  600w,
-                  ./assets/images/hero/bg-hero_mobile_800.webp  800w,
-                  ./assets/images/hero/bg-hero_mobile.webp     1024w
-                "
-                sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
-                type="image/webp"
-              />
-              <img
-                src="./assets/images/hero/bg-hero_mobile_400.webp"
-                alt="ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
-                class="hero-visual__img"
-                width="1024"
-                height="939"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </picture>
+          <!-- Mobile 4-Slide Unified Story Carousel (Hidden on Desktop) -->
+          <div
+            class="hero-slider-wrapper"
+            id="hero-slider-wrapper"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="ShuddhVeda Honey Mobile Showcase"
+          >
+            <div class="hero-slider-track" id="hero-slider-track">
+              <!-- Slide 1: First Trio Collection (Explore button -> #products, CTA: Get Early Bird Access -> #join-hive) -->
+              <div
+                class="hero-slide"
+                data-slide-index="0"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 1 of 4: First Three Honey Varieties"
+              >
+                <div class="hero-slide__content">
+                  <div
+                    class="launch-badge"
+                    role="status"
+                    aria-label="Launch announcement"
+                  >
+                    <span class="launch-badge__text">Launching soon</span>
+                  </div>
+                  <h2 class="hero-title">
+                    Something <span class="hero-title__highlight">Pure</span
+                    ><br />
+                    Is Coming.
+                  </h2>
+                  <p class="hero-subtitle">
+                    Pure honey. Six floral journeys.<br />
+                    One promise of purity.
+                  </p>
+                  <a
+                    href="#join-hive"
+                    class="btn-cta"
+                    aria-label="Unlock 10% coupon by joining our launch list"
+                  >
+                    <span>Unlock 10% coupon</span>
+                    <span class="btn-cta__icon" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="hero-slide__visual">
+                  <picture class="hero-visual__picture">
+                    <source
+                      media="(max-width: 991px)"
+                      srcset="
+                        ./assets/images/hero/slide_1/bg-hero_mobile_400.webp  400w,
+                        ./assets/images/hero/slide_1/bg-hero_mobile_600.webp  600w,
+                        ./assets/images/hero/slide_1/bg-hero_mobile_800.webp  800w,
+                        ./assets/images/hero/slide_1/bg-hero_mobile.webp     1024w
+                      "
+                      sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/products/ajwain/ajwain_honey_400.webp"
+                      alt="ShuddhVeda artisan honey selection - First trio collection"
+                      class="hero-visual__img"
+                      width="1024"
+                      height="939"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Slide 2: Second Trio Collection (Explore button -> #products, CTA: Explore Our Collection -> #products) -->
+              <div
+                class="hero-slide"
+                data-slide-index="1"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 2 of 4: Nature's Sweetest Gift"
+              >
+                <div class="hero-slide__content">
+                  <div
+                    class="launch-badge"
+                    role="status"
+                    aria-label="Launch announcement"
+                  >
+                    <span class="launch-badge__text">Launching soon</span>
+                  </div>
+                  <h2 class="hero-title">
+                    Nature's Sweetest Gift<br />
+                    <span class="hero-title__highlight">In Its Pureest Form</span>
+                  </h2>
+                  <p class="hero-subtitle">
+                    Six unique honey varieties sourced from India's diverse floral landscapes.
+                  </p>
+                  <a
+                    href="#join-hive"
+                    class="btn-cta"
+                    aria-label="Unlock 10% coupon by joining our launch list"
+                  >
+                    <span>Unlock 10% coupon</span>
+                    <span class="btn-cta__icon" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="hero-slide__visual">
+                  <picture class="hero-visual__picture">
+                    <source
+                      media="(max-width: 991px)"
+                      srcset="
+                        ./assets/images/hero/slide_2/bg-hero_mobile_slide_2_400.webp   400w,
+                        ./assets/images/hero/slide_2/bg-hero_mobile_slide_2_600.webp   600w,
+                        ./assets/images/hero/slide_2/bg-hero_mobile_slide_2_800.webp   800w,
+                        ./assets/images/hero/slide_2/bg-hero_mobile_slide_2_1024.webp 1024w
+                      "
+                      sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/products/fennel/fennel_honey_400.webp"
+                      alt="ShuddhVeda artisan honey selection - Second trio collection"
+                      class="hero-visual__img"
+                      width="1024"
+                      height="939"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Slide 3: Third Collection Highlight (Explore button -> #products, CTA: Get Early Bird Access -> #join-hive) -->
+              <div
+                class="hero-slide"
+                data-slide-index="2"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 3 of 4: Goodness for a Healthier You"
+              >
+                <div class="hero-slide__content">
+                  <div
+                    class="launch-badge"
+                    role="status"
+                    aria-label="Launch announcement"
+                  >
+                    <span class="launch-badge__text">Launching soon</span>
+                  </div>
+                  <h2 class="hero-title">
+                    Goodness<br />
+                    for a <span class="hero-title__highlight">Healthier You</span>
+                  </h2>
+                  <p class="hero-subtitle">
+                    Pure, natural honey packed with nature's nutrients to support your everyday wellness.
+                  </p>
+                  <a
+                    href="#join-hive"
+                    class="btn-cta"
+                    aria-label="Unlock 10% coupon by joining our launch list"
+                  >
+                    <span>Unlock 10% coupon</span>
+                    <span class="btn-cta__icon" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="hero-slide__visual">
+                  <picture class="hero-visual__picture">
+                    <source
+                      media="(max-width: 991px)"
+                      srcset="
+                        ./assets/images/hero/slide_3/bg-hero_mobile_slide_3_400.webp   400w,
+                        ./assets/images/hero/slide_3/bg-hero_mobile_slide_3_600.webp   600w,
+                        ./assets/images/hero/slide_3/bg-hero_mobile_slide_3_800.webp   800w,
+                        ./assets/images/hero/slide_3/bg-hero_mobile_slide_3_1024.webp 1024w
+                      "
+                      sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/products/litchi/litchi_honey_400.webp"
+                      alt="ShuddhVeda floral honey variety"
+                      class="hero-visual__img"
+                      width="1024"
+                      height="939"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Slide 4: All Six Honey Varieties (Launching soon badge, CTA: Discover Natural Goodness -> #products) -->
+              <div
+                class="hero-slide"
+                data-slide-index="3"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Slide 4 of 4: A Touch of Nature in Every Moment"
+              >
+                <div class="hero-slide__content">
+                  <div
+                    class="launch-badge"
+                    role="status"
+                    aria-label="Launch announcement"
+                  >
+                    <span class="launch-badge__text">Launching soon</span>
+                  </div>
+                  <h2 class="hero-title">
+                    A Touch of Nature<br />
+                    <span class="hero-title__highlight">in Every Moment</span>
+                  </h2>
+                  <p class="hero-subtitle">
+                    Drizzle, mix, cook or simply enjoy — ShuddhVeda Honey adds natural sweetness and rich flavour to your day.
+                  </p>
+                  <a
+                    href="#join-hive"
+                    class="btn-cta"
+                    id="cta-notify"
+                    aria-label="Unlock 10% coupon by joining our launch list"
+                  >
+                    <span>Unlock 10% coupon</span>
+                    <span class="btn-cta__icon" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="hero-slide__visual">
+                  <picture class="hero-visual__picture">
+                    <source
+                      media="(max-width: 991px)"
+                      srcset="
+                        ./assets/images/hero/slide_4/bg-hero_mobile_slide_4_400.webp   400w,
+                        ./assets/images/hero/slide_4/bg-hero_mobile_slide_4_600.webp   600w,
+                        ./assets/images/hero/slide_4/bg-hero_mobile_slide_4_800.webp   800w,
+                        ./assets/images/hero/slide_4/bg-hero_mobile_slide_4_1024.webp 1024w
+                      "
+                      sizes="(max-width: 600px) 100vw, (max-width: 991px) 85vw, 1024px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/hero/bg-hero_mobile_400.webp"
+                      alt="All six ShuddhVeda artisan honey jars with floral ingredients and honeycomb"
+                      class="hero-visual__img"
+                      width="1024"
+                      height="939"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Carousel Pagination Dots -->
+            <div
+              class="hero-pagination"
+              id="hero-pagination"
+              role="tablist"
+              aria-label="Hero slider pagination"
+            >
+              <button
+                type="button"
+                class="pagination-dot active"
+                role="tab"
+                aria-selected="true"
+                aria-label="Go to slide 1: First honey varieties"
+                data-dot="0"
+              ></button>
+              <button
+                type="button"
+                class="pagination-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Go to slide 2: Second honey varieties"
+                data-dot="1"
+              ></button>
+              <button
+                type="button"
+                class="pagination-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Go to slide 3: Third honey varieties"
+                data-dot="2"
+              ></button>
+              <button
+                type="button"
+                class="pagination-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Go to slide 4: All six honey varieties"
+                data-dot="3"
+              ></button>
+            </div>
           </div>
         </div>
       </section>
@@ -1639,7 +1929,7 @@
                 id="join-hive-submit-btn"
                 aria-label="Notify me about ShuddhVeda honey launch"
               >
-                <span class="join-hive-btn__text">NOTIFY ME</span>
+                <span class="join-hive-btn__text">Unlock 10% coupon</span>
                 <span class="join-hive-btn__arrow" aria-hidden="true"
                   >&rarr;</span
                 >

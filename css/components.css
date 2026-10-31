@@ -35,6 +35,28 @@
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 16px rgba(89, 49, 2, 0.1);
   white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.launch-badge--interactive {
+  cursor: pointer;
+}
+
+.launch-badge--interactive:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--color-brandy-punch);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(89, 49, 2, 0.15);
+}
+
+.launch-badge--interactive:active {
+  transform: translateY(0);
+}
+
+.launch-badge--interactive:focus-visible {
+  outline: 2px solid var(--color-brandy-punch);
+  outline-offset: 3px;
 }
 
 .launch-badge__text {

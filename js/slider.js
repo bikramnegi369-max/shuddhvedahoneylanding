@@ -12,6 +12,7 @@ function createCarousel({
   initialActiveIndex = 0,
   breakpoint = 992,
   autoplayDelay = 3500,
+  onSlideChange = null,
 }) {
   const wrapper = document.getElementById(wrapperId);
   const track = document.getElementById(trackId);
@@ -102,10 +103,16 @@ function createCarousel({
     dots.forEach((dot, idx) => {
       if (idx === activeRealIndex) {
         dot.classList.add('active');
+        dot.setAttribute('aria-selected', 'true');
       } else {
         dot.classList.remove('active');
+        dot.setAttribute('aria-selected', 'false');
       }
     });
+
+    if (typeof onSlideChange === 'function') {
+      onSlideChange(activeRealIndex);
+    }
   }
 
   function goToSlide(index, animate = true) {
@@ -333,4 +340,21 @@ export function initHoneyPickSlider() {
     autoplayDelay: 3500,
   });
 }
+
+/**
+ * Initialize Hero Section Mobile Carousel (4 Slides)
+ * Fully unified slides with touch dragging and autoplay.
+ */
+export function initHeroSlider() {
+  createCarousel({
+    wrapperId: 'hero-slider-wrapper',
+    trackId: 'hero-slider-track',
+    itemSelector: '.hero-slide',
+    dotSelector: '#hero-pagination .pagination-dot',
+    initialActiveIndex: 0,
+    breakpoint: 992,
+    autoplayDelay: 4500,
+  });
+}
+
 

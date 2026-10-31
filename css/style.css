@@ -48,19 +48,89 @@
   width: 100%;
 }
 
-/* Mobile image: full bleed edge-to-edge without border-radius, shadows, or decorative framing */
-.hero-visual {
+/* Hero Mobile / Desktop Display Switch */
+.hero-content--desktop {
+  display: none;
+}
+
+/* Mobile 4-Slide Unified Story Carousel */
+.hero-slider-wrapper {
   display: block;
-  width: calc(100% + 3rem);
+  position: relative;
+  width: 100vw;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
-  margin-top: 2rem;
-  margin-bottom: -3.5rem;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y pinch-zoom;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .hero-visual {
-    width: calc(100% + 6rem);
+  .hero-slider-wrapper {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+.hero-slider-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+  cursor: grab;
+}
+
+.hero-slider-track:active {
+  cursor: grabbing;
+}
+
+.hero-slide {
+  flex: 0 0 100vw;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-slide {
+    padding: 0 3rem;
+  }
+}
+
+.hero-slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-slide .btn-cta {
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.hero-slide__visual {
+  display: block;
+  width: 100vw;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-slide__visual {
     margin-left: -3rem;
     margin-right: -3rem;
   }
@@ -80,6 +150,19 @@
   box-shadow: none;
   border: none;
   display: block;
+  pointer-events: none;
+}
+
+/* Hero Carousel Pagination Dots */
+.hero-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
 /* Desktop layout overrides (min-width: 992px) */
@@ -90,12 +173,13 @@
     padding-bottom: 5rem;
   }
 
-  .hero-content {
+  .hero-content--desktop {
+    display: flex;
     align-items: flex-start;
     text-align: left;
   }
 
-  .hero-visual {
+  .hero-slider-wrapper {
     display: none;
   }
 }
